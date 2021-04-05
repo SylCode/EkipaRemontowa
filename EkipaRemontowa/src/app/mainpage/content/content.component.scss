@@ -1,0 +1,57 @@
+#group1 {
+  z-index: 5;
+}
+
+.content {
+  background-image: url(../../../assets/stone-feature-wall.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  z-index: 4;
+}
+
+.info-box {
+  text-align: center;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  top: 10%;
+  font-size: 200%;
+  margin-left: 10%;
+}
+p {
+  text-align: center;
+  margin: 0px 15px 0px 10px;
+  color: white;
+}
+
+.wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+#slide-left {
+  position: relative;
+  left: -100%;
+  animation: slide-left 0.5s forwards;
+  animation-delay: 0.4s;
+}
+#slide-right {
+  position: relative;
+  right: -100%;
+  animation: slide-right 0.3s forwards;
+  animation-delay: 1s;
+}
+
+@keyframes slide-left {
+  100% {
+    left: 0;
+  }
+}
+
+@keyframes slide-right {
+  100% {
+    right: 0;
+  }
+}
