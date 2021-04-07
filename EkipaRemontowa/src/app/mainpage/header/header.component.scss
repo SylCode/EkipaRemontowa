@@ -12,12 +12,14 @@
   z-index: 10;
   p {
     text-align: center;
+    white-space: nowrap;
     margin: -10px 15px 0px 10px;
     &.start {
       font-size: 1.7rem;
       font-weight: bold;
       margin-right: auto;
       margin-left: 1.5rem;
+      color: white;
     }
     &.end {
       font-size: 1.6rem;
