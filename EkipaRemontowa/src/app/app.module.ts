@@ -1,20 +1,27 @@
+import { IoService } from 'src/app/io.service';
 import { MainpageModule } from './mainpage/mainpage.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HeaderComponent } from './header/header.component';
+import { HttpClientModule } from '@angular/common/http';
+import { NgxSmoothScrollModule } from '@eunsatio/ngx-smooth-scroll';
 
 @NgModule({
   declarations: [
     AppComponent,
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MainpageModule
+    MainpageModule,
+    HttpClientModule,
+    NgxSmoothScrollModule
   ],
-  providers: [],
+  providers: [IoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

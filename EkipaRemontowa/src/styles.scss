@@ -29,6 +29,19 @@ body {
   -ms-user-select: none; /* Internet Explorer/Edge */
   user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
 }
+.blurred {
+  transition: 0.2s;
+  filter: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='a' x='0' y='0' width='1' height='1'%3E%3CfeGaussianBlur stdDeviation='4' result='b'/%3E%3CfeMorphology operator='dilate' radius='4'/%3E %3CfeMerge%3E%3CfeMergeNode/%3E%3CfeMergeNode in='b'/%3E%3C/feMerge%3E%3C/filter%3E%3C/svg%3E#a");
+}
+
+.centered {
+  border-style: none;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
 
 img {
   -webkit-touch-callout: none; /* iOS Safari */
@@ -126,8 +139,8 @@ img {
 }
 
 .parallax__layer--fore {
-  -webkit-transform: translateZ(190px) scale(0.352);
-  transform: translateZ(190px) scale(0.352);
+  -webkit-transform: translateZ(120px) scale(0.591);
+  transform: translateZ(120px) scale(0.591);
   z-index: 1;
 }
 
@@ -171,7 +184,7 @@ img {
 }
 
 #group3 {
-  z-index: 5; /* slide over group 2 and 4 */
+  z-index: 6; /* slide over group 2 and 4 */
 }
 #group4 {
   z-index: 2; /* slide under group 3 and 5 */

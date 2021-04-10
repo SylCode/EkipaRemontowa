@@ -1,0 +1,55 @@
+.info {
+  height: 6%;
+  //transform: skew(20deg);
+  background: rgba(255, 255, 255, 0.521);
+  z-index: 5;
+}
+
+p {
+  text-align: center;
+  color: rgb(71, 71, 71);
+  // font-size: 200%;
+  font-weight: bold;
+  width: 100%;
+}
+
+.back-img1 {
+  background-image: url(../../../assets/SL-022620-28420-06.jpg);
+  //   SL-022620-28420-06
+  // SL-022620-28420-04
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.box {
+  border-radius: 0px;
+  background-color: rgba(255, 255, 255, 0.233);
+  height: 80%;
+  width: 80%;
+}
+
+ol {
+  list-style: none;
+  counter-reset: steps;
+  text-align: left;
+  margin: 50px;
+}
+ol li {
+  counter-increment: steps;
+}
+ol li::before {
+  content: counter(steps);
+  margin-right: 0.5rem;
+  background: #ff6f00;
+  color: white;
+  width: 1.2em;
+  height: 1.2em;
+  border-radius: 50%;
+  display: inline-grid;
+  place-items: center;
+  line-height: 1.2em;
+}
+ol ol li::before {
+  background: darkorchid;
+}

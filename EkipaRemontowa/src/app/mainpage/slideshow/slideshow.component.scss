@@ -3,20 +3,14 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-}
-
-.back-img1 {
-  background-image: url(../../../assets/master-bedroom-decor-ideas.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  filter: blur(2px);
 }
 
 .info {
-  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
   height: 6%;
   //transform: skew(20deg);
   background: rgba(255, 255, 255, 0.521);
+  z-index: 5;
 }
 
 p {
@@ -30,7 +24,7 @@ p {
 .box {
   border-radius: 0px;
   width: 70%;
-  height: 70%;
+  height: 80%;
   background-color: rgba(255, 255, 255, 0.61);
 }
 
@@ -45,13 +39,4 @@ p {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-}
-
-.centered {
-  border-style: none;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
 }
