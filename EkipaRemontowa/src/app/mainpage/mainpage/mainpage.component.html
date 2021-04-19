@@ -1,4 +1,10 @@
-<div class="parallax">
+<div
+  id="mainpage"
+  class="parallax"
+  [ngxSmoothScroll]="options"
+  childSelector=".scroll-target"
+  smooth-wheel
+>
   <app-content></app-content>
   <app-slideshow></app-slideshow>
   <app-realizacje></app-realizacje>

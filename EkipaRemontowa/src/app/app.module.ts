@@ -18,8 +18,8 @@ import { NgxSmoothScrollModule } from '@eunsatio/ngx-smooth-scroll';
     BrowserModule,
     AppRoutingModule,
     MainpageModule,
-    HttpClientModule,
-    NgxSmoothScrollModule
+    HttpClientModule
+    // NgxSmoothScrollModule
   ],
   providers: [IoService],
   bootstrap: [AppComponent]

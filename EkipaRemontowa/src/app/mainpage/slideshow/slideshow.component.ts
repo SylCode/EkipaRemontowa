@@ -12,10 +12,10 @@ export class SlideshowComponent implements OnInit {
 
   // public imageList: Array<string>;
   ngOnInit(): void {
-    this.ioService.getGalleryList().subscribe(data =>{
-      console.log(data);
-      return data;
-    })
+    // this.ioService.getGalleryList().subscribe(data =>{
+    //   console.log(data);
+    //   return data;
+    // });
   }
 
 }

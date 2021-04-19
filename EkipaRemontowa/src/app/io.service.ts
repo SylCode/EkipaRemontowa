@@ -12,6 +12,6 @@ export class IoService {
 
   public getGalleryList(): Observable<Object>
   {
-    return this.httpClient.get("../../../assets/Gallery/galeryList.json");
+    return new Observable<Object>();//this.httpClient.get("../../../assets/Gallery/galeryList.json");
   }
 }

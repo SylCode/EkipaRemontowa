@@ -7,6 +7,7 @@ import { MainpageComponent } from './mainpage/mainpage.component';
 import { PricingComponent } from './pricing/pricing.component';
 import { InformationComponent } from './information/information.component';
 import { RealizacjeComponent } from './realizacje/realizacje.component';
+import { NgxSmoothScrollModule } from '@eunsatio/ngx-smooth-scroll';
 
 
 
@@ -21,7 +22,8 @@ import { RealizacjeComponent } from './realizacje/realizacje.component';
     RealizacjeComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    NgxSmoothScrollModule
   ]
 })
 export class MainpageModule { }
