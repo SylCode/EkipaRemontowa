@@ -1,24 +1,28 @@
 
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild, ViewContainerRef } from '@angular/core';
+import { ScrollService } from 'src/scroll.service';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
+
 export class HeaderComponent implements OnInit {
+  @ViewChild('mainpage')
+  mainpage!: ElementRef<HTMLElement>;
 
-  constructor() { }
+  constructor(
+    private scrollService: ScrollService, 
+    private ref: ElementRef) { }
 
-  ngOnInit(): void {
+  ngOnInit(): void { 
   }
 
-  public scroll(el: string) {
-    var element = document.getElementById(el);
-    if (element)
-    {
-      element.scrollIntoView({behavior: 'smooth'});
-    }
-}
 
+
+  public scroll(el: string) {
+    var destination = document.getElementById(el);
+    this.scrollService.scrollbyElRef(this.ref, this.mainpage);
+  }
 }
