@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ScrollService } from 'src/scroll.service';
 
 @Component({
   selector: 'app-pricing',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PricingComponent implements OnInit {
 
-  constructor() { }
+  constructor(private scrollService: ScrollService) { }
 
   ngOnInit(): void {
+  }
+
+  ngAfterViewInit(): void {
+    this.scrollService.diableScroll();
   }
 
 }

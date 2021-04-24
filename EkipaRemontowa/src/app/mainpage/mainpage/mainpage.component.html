@@ -1,14 +1,8 @@
-<div
-  id="mainpage"
-  class="parallax"
-  [ngxSmoothScroll]="options"
-  childSelector=".scroll-target"
-  smooth-wheel
->
-  <app-content></app-content>
-  <app-slideshow></app-slideshow>
-  <app-realizacje></app-realizacje>
-  <app-pricing></app-pricing>
-  <app-footer></app-footer>
-  <p>mainpage works!</p>
+<app-header></app-header>
+<div class="parallax" #wrapper>
+  <app-content class="content" appScrollable></app-content>
+  <app-slideshow class="content" appScrollable></app-slideshow>
+  <app-realizacje class="content" appScrollable></app-realizacje>
+  <!-- <app-footer class="content" appScrollable></app-footer> -->
+  <!-- <p>mainpage works!</p> -->
 </div>

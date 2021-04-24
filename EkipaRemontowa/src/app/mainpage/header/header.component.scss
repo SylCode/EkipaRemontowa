@@ -1,18 +1,14 @@
 .header {
   border-style: none;
-  height: 4rem;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-items: flex-end;
-  background: linear-gradient(180deg, #754e353f 0%, rgba(0, 212, 255, 0) 100%);
+  background: none;
+  height: 6%;
+
   z-index: 10;
   p {
     text-align: center;
     white-space: nowrap;
     margin: -10px 15px 0px 10px;
-    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
-      1px 1px 0 #000;
+    //text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
     &.start {
       font-size: 1.7rem;
       font-weight: bold;
@@ -31,8 +27,26 @@
     transition: 0.3s;
   }
 }
+
+.dark-text {
+  color: rgb(22, 22, 22);
+}
+
+.flex {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-items: flex-end;
+}
+
 .sticky {
   position: fixed;
   top: 0;
-  width: 96vw;
+  width: 100vw;
+}
+
+@media (max-width: 860px) {
+  .hidden-sm {
+    display: none;
+  }
 }

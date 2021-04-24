@@ -5,21 +5,19 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
 import { HttpClientModule } from '@angular/common/http';
-import { NgxSmoothScrollModule } from '@eunsatio/ngx-smooth-scroll';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    HeaderComponent,
+    AppComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     MainpageModule,
-    HttpClientModule
-    // NgxSmoothScrollModule
+    HttpClientModule,
+    BrowserAnimationsModule
   ],
   providers: [IoService],
   bootstrap: [AppComponent]
