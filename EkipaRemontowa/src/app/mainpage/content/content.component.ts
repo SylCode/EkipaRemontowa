@@ -7,8 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContentComponent implements OnInit {
 
-  public availability: string = "Lipiec";
+  public availability: string = "Koniec Lipca";
 
+  public left=350;
   constructor() { }
 
   ngOnInit(): void {

@@ -17,7 +17,7 @@ export class HeaderComponent implements OnInit {
   @HostListener('window:resize', ['$event'])
   onResize(event?: Event) {
     this.screenWidth = window.innerWidth;
-    this.mobileMenu = this.screenWidth <=  860;
+    this.mobileMenu = this.screenWidth <=  1000;
 }
 
   constructor(
@@ -32,6 +32,10 @@ export class HeaderComponent implements OnInit {
   }
 
   public navigateTo(path: string, postScroll: string){
-    this.router.navigate([path], {queryParams: {scrollTo: postScroll}});
+    if(path == '')
+      this.router.navigate([path]).then(() => {
+        window.location.reload();
+      });
+      else this.router.navigate([path]);
   }
 }

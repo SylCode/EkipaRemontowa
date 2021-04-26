@@ -99,6 +99,7 @@ button {
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   letter-spacing: 1px;
   font: 0.9em;
+  transition: 0.5s;
   &:hover {
     transition: 0.5s;
     background: rgba(255, 255, 255, 0.5);

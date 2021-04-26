@@ -1,10 +1,12 @@
 <div id="group1" class="noselect parallax__group">
   <div class="scroll-target content parallax__layer parallax__layer--base">
-    <div class="info-box wrapper">
-      <label id="slide-left" class="text-highlight fade-in" for="time"
-        >Najbliższy wolny termin</label
+    <div class="wrapper">
+      <p class="text-highlight">Najbliższy wolny termin</p>
+      <p
+        id="slide-right"
+        class="text-highlight date"
+        [ngStyle]="{ left: left }"
       >
-      <p id="slide-right" class="text-highlight fade-in">
         {{ availability }}
       </p>
     </div>

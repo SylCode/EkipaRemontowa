@@ -8,8 +8,8 @@ import { PricingComponent } from './pricing/pricing.component';
 import { InformationComponent } from './information/information.component';
 import { RealizacjeComponent } from './realizacje/realizacje.component';
 import { NgxSmoothScrollModule } from '@eunsatio/ngx-smooth-scroll';
-import { HeaderComponent } from './header/header.component';
 import { ScrollableDirective } from '../scrollable.directive';
+import { CarouselComponent } from '../carousel/carousel.component';
 
 
 
@@ -22,8 +22,8 @@ import { ScrollableDirective } from '../scrollable.directive';
     PricingComponent,
     InformationComponent,
     RealizacjeComponent,
-    HeaderComponent,
-    ScrollableDirective
+    ScrollableDirective,
+    CarouselComponent
   ],
   imports: [
     CommonModule,

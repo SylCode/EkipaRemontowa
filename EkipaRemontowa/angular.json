@@ -33,7 +33,9 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "./src/carousel.js"
+          ]
           },
           "configurations": {
             "production": {
@@ -70,6 +72,9 @@
           "options": {
             "browserTarget": "EkipaRemontowa:build"
           },
+          "scripts": [
+            "./src/carousel.js"
+        ],
           "configurations": {
             "production": {
               "browserTarget": "EkipaRemontowa:build:production"
@@ -96,7 +101,9 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "./src/carousel.js"
+          ]
           }
         },
         "lint": {

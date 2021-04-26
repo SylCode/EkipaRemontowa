@@ -2,12 +2,14 @@
   class="header flex sticky"
   [ngStyle]="{ 'dark-text': scrollService.getScrollStatus() }"
 >
-  <p class="noselect start" (click)="scroll('app-content')">EKIPA REMONTOWA</p>
+  <h1 class="noselect start" (click)="scroll('app-content')">
+    EKIPA REMONTOWA
+  </h1>
   <div class="noselect flex end hidden-sm" *ngIf="!mobileMenu">
-    <p class="noselect end" (click)="scroll('app-slideshow')">Galeria</p>
-    <p class="noselect end" (click)="scroll('app-realizacje')">Realizacje</p>
-    <p class="noselect end" (click)="navigateTo('pricing', '')">Wycena</p>
-    <p class="noselect end">O nas</p>
-    <p class="noselect end">Kontakt</p>
+    <h2 class="noselect end" (click)="scroll('app-slideshow')">Galeria</h2>
+    <h2 class="noselect end" (click)="scroll('app-realizacje')">Realizacje</h2>
+    <h2 class="noselect end" (click)="scroll('app-pricing')">Wycena</h2>
+    <h2 class="noselect end">O nas</h2>
+    <h2 class="noselect end">Kontakt</h2>
   </div>
 </div>
