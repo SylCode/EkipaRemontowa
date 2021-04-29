@@ -1,4 +1,12 @@
 {
+  "browser": {
+    "http": false,
+    "https": false,
+    "net": false,
+    "path": false,
+    "stream": false,
+    "tls": false
+  },
   "name": "ekipa-remontowa",
   "version": "0.0.0",
   "scripts": {
