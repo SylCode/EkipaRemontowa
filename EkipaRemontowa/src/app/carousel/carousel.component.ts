@@ -15,14 +15,14 @@ export class CarouselComponent implements OnInit {
     '../../assets/Galery/image11.jpg',
     '../../assets/Galery/image4.jpg',
     '../../assets/Galery/image6.jpg',
+    '../../assets/Galery/image5.jpg',
     '../../assets/Galery/image12.jpg',
     '../../assets/Galery/image1.jpg',
     '../../assets/Galery/image3.jpg',
     '../../assets/Galery/image8.jpg',
     '../../assets/Galery/image9.jpg',
     '../../assets/Galery/image10.jpg',
-    '../../assets/Galery/image2.jpg',
-    '../../assets/Galery/image5.jpg',];}
+    '../../assets/Galery/image2.jpg',];}
 
   public images: Array<string>;
   ngOnInit(): void {

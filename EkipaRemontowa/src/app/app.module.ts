@@ -9,12 +9,16 @@ import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { InView } from './in-view.directive';
 import { HeaderComponent } from './mainpage/header/header.component';
+import { AboutUsComponent } from './about-us/about-us.component';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    InView
+    InView,
+    AboutUsComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,

@@ -3,6 +3,12 @@ window.onload = function() {
 }
 function init()
 {
+  try {
+    var check = document.querySelector("#panelWrap");
+    if(!check) return;
+  } catch (error) {
+    
+  }
   console.clear();
   const slides = document.querySelectorAll("#Imagesection");
   const container = document.querySelector("#panelWrap");
