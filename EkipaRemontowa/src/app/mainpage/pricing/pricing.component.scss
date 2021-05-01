@@ -7,27 +7,30 @@ section {
   background: linear-gradient(to bottom, #2e2e2e, #000000);
   .color {
     position: absolute;
-    filter: blur(200px);
   }
   .color:nth-child(1) {
     width: 55vw;
     height: 55vh;
     top: 10px;
     background: #ff7417;
+    filter: blur(200px);
   }
   .color:nth-child(2) {
     width: 55%;
-    height: 55%;
+    height: 35%;
     top: 50%;
     left: -60%;
     background: #0031d42a;
+    filter: blur(200px);
   }
   .color:nth-child(3) {
-    width: 55%;
-    height: 55%;
-    top: 25%;
-    right: 10%;
+    width: 45%;
+    height: 45%;
+    top: 55%;
+    right: 2%;
     background: #44caff;
+    transform: rotate(-45deg);
+    filter: blur(200px);
   }
 }
 
@@ -156,8 +159,8 @@ h2::before {
 
 @keyframes slide-right {
   100% {
-    top: 25%;
-    right: 10%;
+    top: 55%;
+    right: 2%;
   }
 }
 

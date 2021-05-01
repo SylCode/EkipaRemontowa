@@ -1,3 +1,4 @@
+import { SharedModule } from './shared/shared.module';
 import { IoService } from 'src/app/io.service';
 import { MainpageModule } from './mainpage/mainpage.module';
 import { NgModule } from '@angular/core';
@@ -25,7 +26,8 @@ import { ContactComponent } from './contact/contact.component';
     AppRoutingModule,
     MainpageModule,
     HttpClientModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    SharedModule
   ],
   providers: [IoService],
   bootstrap: [AppComponent]

@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-// import * as fs from 'fs';
 
 @Injectable({
   providedIn: 'root'
@@ -9,12 +8,22 @@ import { Observable } from 'rxjs';
 export class IoService {
 
   constructor(private httpClient: HttpClient) {
-    //const fs = require('fs');
-    //var text = fs.readFileSync('../../assets/about.txt','utf8');
   }
 
-  public getGalleryList(): Observable<Object>
+  public getGalleryList(): Observable<Array<string>>
   {
-    return new Observable<Object>();//this.httpClient.get("../../../assets/Gallery/galeryList.json");
+    return this.httpClient.get<Array<string>>('/api/media');
+  }
+
+  public getAboutInfo(): Observable<string>{
+    return this.httpClient.get<string>('/api/media/about');
+  }
+
+  public getReservationDate(): Observable<string>{
+    return this.httpClient.get<string>('api/media/reservation');
+  }
+
+  public getRealisations(): Observable<Array<string>>{
+    return this.httpClient.get<Array<string>>('api/media/realisations');
   }
 }

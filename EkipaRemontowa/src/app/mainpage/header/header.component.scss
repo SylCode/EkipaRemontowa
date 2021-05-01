@@ -7,27 +7,30 @@
   h2 {
     text-align: center;
     white-space: nowrap;
-    padding: 10px 15px;
-    letter-spacing: 1px;
+    letter-spacing: 0.07rem;
     transition: 0.3s;
+    cursor: pointer;
     //text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
     &.start {
       font-weight: bold;
       margin-right: auto;
       margin-left: 1.5rem;
       color: white;
+      height: 100%;
+      padding: 0rem 1rem;
     }
     &.end {
       font-weight: 600;
-    }
-    &:hover {
+      padding: 0.8rem 1rem;
+      &:hover {
+        transition: 0.3s;
+        background: rgba(255, 255, 255, 0.048);
+        backdrop-filter: blur(5px);
+        color: white;
+        box-shadow: 0 25px 25px rgba(0, 0, 0, 0.3);
+      }
       transition: 0.3s;
-      background: rgba(255, 255, 255, 0.048);
-      backdrop-filter: blur(5px);
-      color: white;
-      box-shadow: 0 25px 45px rgba(0, 0, 0, 0.3);
     }
-    transition: 0.3s;
   }
 }
 

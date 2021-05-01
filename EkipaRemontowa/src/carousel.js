@@ -1,3 +1,4 @@
+import { gsap } from "gsap";
 window.onload = function() {
   init();
 }
@@ -9,7 +10,7 @@ function init()
   } catch (error) {
     
   }
-  console.clear();
+  //console.clear();
   const slides = document.querySelectorAll("#Imagesection");
   const container = document.querySelector("#panelWrap");
   let dur = 0.5;

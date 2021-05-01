@@ -1,3 +1,4 @@
+import { IoService } from 'src/app/io.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,8 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RealizacjeComponent implements OnInit {
 
-  public items = ['2021-03: Chalupnicza','2020-01: Magellana','bbal','blablabl']
-  constructor() { }
+  public items: string[] = []
+  constructor(private ioService: IoService) { 
+    this.ioService.getRealisations().subscribe(data => {
+      this.items = data;
+    })
+  }
 
   ngOnInit(): void {
   }

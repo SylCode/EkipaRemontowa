@@ -4,6 +4,31 @@
   width: 100%;
   height: 100%;
   background: linear-gradient(to bottom, #2e2e2e, #000000);
+
+  .circle {
+    filter: blur(200px);
+    position: absolute;
+    border-radius: 50%;
+    &:nth-of-type(1) {
+      bottom: -15%;
+      right: -5%;
+      width: 40rem;
+      height: 40rem;
+      background: linear-gradient(
+        30deg,
+        rgb(76, 0, 255) 0%,
+        rgb(0, 0, 0) 39%,
+        rgb(0, 195, 255) 72%
+      );
+    }
+    &:nth-of-type(2) {
+      width: 60rem;
+      height: 60rem;
+      left: 5%;
+      top: 10%;
+      background: rgba(255, 111, 0, 1);
+    }
+  }
   .wrapper {
     // border: 3px yellow solid;
     padding: 20px;
@@ -24,9 +49,12 @@
       overflow-y: auto;
       text-justify: inter-ideograph;
       max-width: 50%;
-      padding: 20px;
+      padding: 0px 40px;
+      margin-left: auto;
+      margin-right: auto;
       font-size: 1.4rem;
       text-align: justify;
+      letter-spacing: normal;
       .text-title {
         padding: 20px 0px;
         text-transform: uppercase;
