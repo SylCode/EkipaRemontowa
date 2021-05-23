@@ -5,123 +5,13 @@
   <div class="box">
     <div class="container">
       <h2>Przykładowa wycena</h2>
-      <form class="form" action="price">
-        <div class="input-box">
-          <input id="1" type="text" placeholder="rozmiar płytek cm x cm" />
+      <div class="wrapper">
+        <div class="item" *ngFor="let item of items">
+          <app-field></app-field>
+          <hr />
         </div>
-        <div class="input-box">
-          <input id="1" type="text" placeholder="powierszhcnia m2" />
-        </div>
-        <div class="input-box">
-          <input id="1" type="text" placeholder="ilość płytek" />
-        </div>
-        <div class="input-box">
-          <input id="1" type="text" placeholder="rozmiar płytek cm x cm" />
-        </div>
-        <div class="input-box">
-          <input id="1" type="text" placeholder="rozmiar płytek cm x cm" />
-        </div>
-        <div class="input-box">
-          <input id="1" type="text" placeholder="rozmiar płytek cm x cm" />
-        </div>
-        <div class="input-box">
-          <input id="1" type="text" placeholder="rozmiar płytek cm x cm" />
-        </div>
-        <div class="input-box">
-          <input id="1" type="text" placeholder="rozmiar płytek cm x cm" />
-        </div>
-        <div class="input-box">
-          <input id="1" type="text" placeholder="rozmiar płytek cm x cm" />
-        </div>
-        <div class="input-box">
-          <input id="1" type="text" placeholder="rozmiar płytek cm x cm" />
-        </div>
-        <div class="input-box">
-          <input id="1" type="text" placeholder="rozmiar płytek cm x cm" />
-        </div>
-        <div class="input-box">
-          <input id="1" type="text" placeholder="rozmiar płytek cm x cm" />
-        </div>
-        <div class="input-box">
-          <input id="1" type="text" placeholder="rozmiar płytek cm x cm" />
-        </div>
-        <div class="input-box">
-          <input id="1" type="text" placeholder="rozmiar płytek cm x cm" />
-        </div>
-        <div class="input-box">
-          <input id="1" type="text" placeholder="ilość płytek" />
-        </div>
-        <div class="input-box">
-          <input id="1" type="text" placeholder="rozmiar płytek cm x cm" />
-        </div>
-        <div class="input-box">
-          <input id="1" type="text" placeholder="rozmiar płytek cm x cm" />
-        </div>
-        <div class="input-box">
-          <input id="1" type="text" placeholder="rozmiar płytek cm x cm" />
-        </div>
-        <div class="input-box">
-          <input id="1" type="text" placeholder="rozmiar płytek cm x cm" />
-        </div>
-        <div class="input-box">
-          <input id="1" type="text" placeholder="rozmiar płytek cm x cm" />
-        </div>
-        <div class="input-box">
-          <input id="1" type="text" placeholder="rozmiar płytek cm x cm" />
-        </div>
-        <div class="input-box">
-          <input id="1" type="text" placeholder="rozmiar płytek cm x cm" />
-        </div>
-        <div class="input-box">
-          <input id="1" type="text" placeholder="rozmiar płytek cm x cm" />
-        </div>
-        <div class="input-box">
-          <input id="1" type="text" placeholder="rozmiar płytek cm x cm" />
-        </div>
-        <div class="input-box">
-          <input id="1" type="text" placeholder="rozmiar płytek cm x cm" />
-        </div>
-        <div class="input-box">
-          <input id="1" type="text" placeholder="rozmiar płytek cm x cm" />
-        </div>
-        <div class="input-box">
-          <input id="1" type="text" placeholder="ilość płytek" />
-        </div>
-        <div class="input-box">
-          <input id="1" type="text" placeholder="rozmiar płytek cm x cm" />
-        </div>
-        <div class="input-box">
-          <input id="1" type="text" placeholder="rozmiar płytek cm x cm" />
-        </div>
-        <div class="input-box">
-          <input id="1" type="text" placeholder="rozmiar płytek cm x cm" />
-        </div>
-        <div class="input-box">
-          <input id="1" type="text" placeholder="rozmiar płytek cm x cm" />
-        </div>
-        <div class="input-box">
-          <input id="1" type="text" placeholder="rozmiar płytek cm x cm" />
-        </div>
-        <div class="input-box">
-          <input id="1" type="text" placeholder="rozmiar płytek cm x cm" />
-        </div>
-        <div class="input-box">
-          <input id="1" type="text" placeholder="rozmiar płytek cm x cm" />
-        </div>
-        <div class="input-box">
-          <input id="1" type="text" placeholder="rozmiar płytek cm x cm" />
-        </div>
-        <div class="input-box">
-          <input id="1" type="text" placeholder="rozmiar płytek cm x cm" />
-        </div>
-        <div class="input-box">
-          <input id="1" type="text" placeholder="rozmiar płytek cm x cm" />
-        </div>
-        <div class="input-box">
-          <input id="1" type="text" placeholder="rozmiar płytek cm x cm" />
-        </div>
-      </form>
-      <button type="submit">Wyceń</button>
+      </div>
     </div>
   </div>
 </section>
+<app-footer class="bottom"></app-footer>

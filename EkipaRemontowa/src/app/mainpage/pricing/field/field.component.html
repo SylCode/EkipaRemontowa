@@ -1,0 +1,12 @@
+<div class="wrapper">
+  <h2>{{ name }}</h2>
+  <div class="fields-container">
+    <form class="form" action="price">
+      <div class="input-box" *ngFor="let field of fields">
+        <h4>{{ field.name }}</h4>
+        <input placeholder="{{ field.unit }}" />
+      </div>
+    </form>
+  </div>
+  <div class="price">= {{ price }} PLN</div>
+</div>

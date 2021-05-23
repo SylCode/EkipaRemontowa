@@ -143,11 +143,7 @@ section {
       linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.753));
   }
 }
-.bottom {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-}
+
 @media only screen and (max-width: 1000px) {
   .grid {
     transition: 0.2s;

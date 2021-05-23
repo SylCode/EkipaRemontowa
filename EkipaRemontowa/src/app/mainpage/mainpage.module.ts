@@ -10,6 +10,8 @@ import { NgxSmoothScrollModule } from '@eunsatio/ngx-smooth-scroll';
 import { ScrollableDirective } from '../scrollable.directive';
 import { CarouselComponent } from '../carousel/carousel.component';
 import { SharedModule } from '../shared/shared.module';
+import { QuestComponent } from './pricing/quest/quest.component';
+import { FieldComponent } from './pricing/field/field.component';
 
 
 
@@ -22,7 +24,9 @@ import { SharedModule } from '../shared/shared.module';
     InformationComponent,
     RealizacjeComponent,
     ScrollableDirective,
-    CarouselComponent
+    CarouselComponent,
+    QuestComponent,
+    FieldComponent
   ],
   imports: [
     CommonModule,

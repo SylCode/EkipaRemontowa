@@ -1,29 +1,39 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Observable, of } from 'rxjs';
+import { catchError, map } from 'rxjs/operators';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class IoService {
+  constructor(private httpClient: HttpClient) {}
 
-  constructor(private httpClient: HttpClient) {
+  public getGalleryList(): Observable<Array<string>> {
+    return this.httpClient
+      .get<Array<string>>('/api/media')
+      .pipe(
+        catchError((_: any) => of('Failed to query Api mEdia'))
+      ) as Observable<Array<string>>;
   }
 
-  public getGalleryList(): Observable<Array<string>>
-  {
-    return this.httpClient.get<Array<string>>('/api/media');
+  public getAboutInfo(): Observable<string> {
+    return this.httpClient
+      .get<string>('/api/media/about')
+      .pipe(catchError((_: any) => of('Failed to get About info')));
   }
 
-  public getAboutInfo(): Observable<string>{
-    return this.httpClient.get<string>('/api/media/about');
+  public getReservationDate(): Observable<string> {
+    return this.httpClient
+      .get<string>('api/media/reservation')
+      .pipe(catchError((_: any) => of('Failed to get reservation info')));
   }
 
-  public getReservationDate(): Observable<string>{
-    return this.httpClient.get<string>('api/media/reservation');
-  }
-
-  public getRealisations(): Observable<Array<string>>{
-    return this.httpClient.get<Array<string>>('api/media/realisations');
+  public getRealisations(): Observable<Array<string>> {
+    return this.httpClient
+      .get<Array<string>>('api/media/realisations')
+      .pipe(
+        catchError((_: any) => of('Failed to get realisations info'))
+      ) as Observable<Array<string>>;
   }
 }

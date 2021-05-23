@@ -1,0 +1,63 @@
+.wrapper {
+  display: grid;
+  grid-template-rows: 0.1fr 0.9fr;
+  grid-template-columns: 0.9fr 0.1fr;
+  gap: 1em 1em;
+  grid-template-areas:
+    ". ."
+    ". .";
+  h2 {
+    grid-column-start: 0;
+    grid-column-end: span 2;
+  }
+  .fields-container {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    min-width: 300px;
+    min-height: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    box-shadow: 0 5px 45px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    .form {
+      display: flex;
+      width: auto;
+      flex-direction: row;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      padding: 20px;
+      .input-box {
+        input {
+          margin-top: 5px;
+          margin-bottom: 5px;
+          width: 80%;
+          background: rgba(255, 255, 255, 0.2);
+          border: none;
+          outline: none;
+          padding: 10px 20px;
+          border-radius: 10px;
+          border: 1px solid rgba(255, 255, 255, 0.5);
+          border-right: 1px solid rgba(255, 255, 255, 0.2);
+          border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+          letter-spacing: 1px;
+          font-size: 14px;
+          color: rgb(255, 255, 255);
+          &::placeholder {
+            color: rgba(255, 255, 255, 0.534);
+          }
+        }
+      }
+    }
+  }
+  .price {
+    font-size: 1.4rem;
+    white-space: nowrap;
+    align-self: center;
+  }
+}

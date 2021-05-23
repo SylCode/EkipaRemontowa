@@ -23,10 +23,24 @@
       <div class="glassy-dark fb-container">
         <h4>znajdź nas na</h4>
         <h3>Facebooku</h3>
-        <div class="glassy fb btn fa fa-facebook fa-fw"></div>
+        <div
+          class="glassy fb btn fa fa-facebook fa-fw"
+          (click)="goToFb()"
+        ></div>
       </div>
     </section>
-    <div class="order glassy-dark">Order</div>
+    <div class="order glassy-dark">
+      <h3>Zamów kontakt</h3>
+      <!-- <form [formGroup]="callMeForm" action="submit" (ng-submit)="callMe()">
+        <input
+          id="email"
+          type="text"
+          class="glassy"
+          placeholder="Adres e-mail"
+        />
+        <button type="submit"></button>
+      </form> -->
+    </div>
     <div class="message glassy-dark">Message</div>
   </div>
 </div>
