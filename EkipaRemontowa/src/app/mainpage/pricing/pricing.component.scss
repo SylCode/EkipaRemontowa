@@ -1,8 +1,10 @@
 section {
   min-width: 100vw;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: row;
   background: linear-gradient(to bottom, #2e2e2e, #000000);
   .color {
     position: absolute;
@@ -35,43 +37,56 @@ section {
 }
 
 .box {
-  width: 100vw;
+  max-width: 95%;
+  max-height: 90%;
   display: flex;
   align-items: center;
-  justify-content: center;
-  margin-top: 60px;
-  padding: 10px;
+  padding: 1rem;
+  .top {
+    align-self: flex-start;
+    margin: 0px 30px;
+  }
 }
 
-.container {
+.container-inner {
   position: relative;
   display: flex;
   flex-direction: column;
-  //align-items: center;
-  min-width: 300px;
-  max-width: 60%;
-  min-height: 50%;
-  max-height: 90vh;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 10px;
-  -webkit-backdrop-filter: blur(5px);
-  backdrop-filter: blur(5px);
-  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.3);
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  border-right: 1px solid rgba(255, 255, 255, 0.2);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  min-width: min-content;
+  padding: 1rem;
+}
+.container-outer {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  min-width: fit-content;
+  max-height: 86vh;
+  padding: 1rem;
   overflow-y: auto;
+  .pricebox {
+    margin: 20px 20px;
+    width: min-content;
+    .price {
+      bottom: 0;
+      color: rgb(100, 255, 100);
+      align-self: flex-start;
+      font-size: 1.8rem;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+  }
   .wrapper {
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
-
+    overflow-y: scroll;
+    overflow-x: hidden;
     .item {
       padding: 5px 20px;
-      width: 33%;
-      flex-grow: 1;
+      max-width: 30%;
     }
     hr {
-      margin-top: 5px;
+      margin-top: 10px;
       border: none;
       border-top: 2px solid rgb(255, 255, 255);
       border-radius: 2px;
@@ -82,28 +97,6 @@ section {
 .info {
   height: 6%;
   background: rgb(48, 48, 48);
-}
-
-h2 {
-  position: relative;
-  text-align: left;
-  color: rgba(255, 255, 255, 0.856);
-  font-size: 2em;
-  font-weight: 600;
-  letter-spacing: 1px;
-  margin-bottom: 10px;
-  margin-top: 10px;
-  margin-bottom: 20px;
-  padding-left: 40px;
-}
-h2::before {
-  content: "";
-  position: absolute;
-  left: 40px;
-  bottom: -10px;
-  width: 17%;
-  height: 4px;
-  background: rgba(255, 255, 255, 0.856);
 }
 
 #slide-left {

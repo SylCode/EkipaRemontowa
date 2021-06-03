@@ -1,5 +1,7 @@
 export interface Field {
-        name: string;
-        pricePerUnit: number;
-        unit: string;
+  id: number;
+  name: string;
+  pricePerUnit: number;
+  unit: string;
+  visible: boolean;
 }

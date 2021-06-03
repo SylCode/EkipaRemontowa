@@ -1,26 +1,33 @@
 import { Field } from './../field';
 import { DataService } from './../data.service';
-import { Component, OnInit } from '@angular/core';
+import {
+  Component,
+  Inject,
+  Input,
+  OnChanges,
+  OnInit,
+  SimpleChanges,
+} from '@angular/core';
 
 @Component({
   selector: 'app-field',
   templateUrl: './field.component.html',
   styleUrls: ['./field.component.scss'],
 })
-export class FieldComponent implements OnInit {
-  public name: string = 'Łazienka';
-  public fields: Array<Field> = [
-    { name: 'Powierszchnia podłogi', pricePerUnit: 10, unit: 'm2' },
-    { name: 'Powierszchnia do płytek', pricePerUnit: 10, unit: 'm2' },
-    { name: 'Gniazdka', pricePerUnit: 10, unit: 'szt' },
-    { name: 'Bateria', pricePerUnit: 10, unit: 'szt' },
-    { name: 'Wanna', pricePerUnit: 10, unit: 'szt' },
-    { name: 'Przysznic', pricePerUnit: 10, unit: 'szt' },
-  ];
-  public price = 3000;
+export class FieldComponent implements OnInit, OnChanges {
+  public fields: Array<Field> = [];
+  public price = 5000;
+
+  @Input() name!: string;
 
   constructor(private dataService: DataService) {
-    //this.fields = dataService.
+    this.fields = dataService.getFieldsForType(this.name);
+  }
+  ngOnChanges(changes: SimpleChanges): void {
+    this.fields = this.dataService.getFieldsForType(this.name);
+    var r = () => {};
+    if (r === null) {
+    }
   }
 
   public calculatePrice(): void {}

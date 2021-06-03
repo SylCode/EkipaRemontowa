@@ -3,14 +3,21 @@
   <div id="slide-left" class="color"></div>
   <div id="slide-right" class="color"></div>
   <div class="box">
-    <div class="container">
-      <h2>Przykładowa wycena</h2>
-      <div class="wrapper">
-        <div class="item" *ngFor="let item of items">
-          <app-field></app-field>
-          <hr />
+    <div class="container-outer glassy">
+      <div class="container-inner">
+        <h2 class="large-underscore">Przykładowa wycena</h2>
+        <div class="wrapper">
+          <div class="item" *ngFor="let item of items">
+            <app-field [name]="item"></app-field>
+            <hr />
+          </div>
+        </div>
+        <div class="pricebox">
+          <h2>Łącznie:</h2>
+          <div class="price last">{{ sum }}</div>
         </div>
       </div>
+      <app-pricing-sidebar class="top"></app-pricing-sidebar>
     </div>
   </div>
 </section>

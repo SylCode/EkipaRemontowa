@@ -12,6 +12,7 @@ import { CarouselComponent } from '../carousel/carousel.component';
 import { SharedModule } from '../shared/shared.module';
 import { QuestComponent } from './pricing/quest/quest.component';
 import { FieldComponent } from './pricing/field/field.component';
+import { PricingSidebarComponent } from './pricing/pricing-sidebar/pricing-sidebar.component';
 
 
 
@@ -26,7 +27,8 @@ import { FieldComponent } from './pricing/field/field.component';
     ScrollableDirective,
     CarouselComponent,
     QuestComponent,
-    FieldComponent
+    FieldComponent,
+    PricingSidebarComponent
   ],
   imports: [
     CommonModule,
