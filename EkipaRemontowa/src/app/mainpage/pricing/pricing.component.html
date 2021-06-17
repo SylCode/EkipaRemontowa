@@ -7,17 +7,21 @@
       <div class="container-inner">
         <h2 class="large-underscore">Przykładowa wycena</h2>
         <div class="wrapper">
-          <div class="item" *ngFor="let item of items">
-            <app-field [name]="item"></app-field>
+          <div class="item">
+            <div #container></div>
             <hr />
           </div>
         </div>
         <div class="pricebox">
+          <hr />
           <h2>Łącznie:</h2>
           <div class="price last">{{ sum }}</div>
         </div>
       </div>
-      <app-pricing-sidebar class="top"></app-pricing-sidebar>
+      <app-pricing-sidebar
+        class="top"
+        (createComponent)="createComponent($event)"
+      ></app-pricing-sidebar>
     </div>
   </div>
 </section>

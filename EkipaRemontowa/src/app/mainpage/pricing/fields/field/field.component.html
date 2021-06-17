@@ -1,0 +1,12 @@
+<div class="wrapper">
+  <h2>{{ displayName }}</h2>
+  <div class="fields-container glassy">
+    <form class="form" action="price">
+      <div class="input-box" *ngFor="let field of publicFields">
+        <h4 *ngIf="field.visible">{{ field.name }}</h4>
+        <input placeholder="{{ field.unit }}" *ngIf="field.visible" />
+      </div>
+    </form>
+  </div>
+  <div class="price">= {{ price }} PLN</div>
+</div>

@@ -4,15 +4,13 @@
     grid-column-end: span 2;
     white-space: nowrap;
   }
-  h4 {
-    //white-space: nowrap;
-  }
   .fields-container {
     position: relative;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     min-width: min-content;
+    //max-width: 30%;
     //min-width: 510px;
     .form {
       display: flex;

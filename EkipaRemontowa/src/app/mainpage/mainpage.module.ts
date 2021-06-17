@@ -11,10 +11,8 @@ import { ScrollableDirective } from '../scrollable.directive';
 import { CarouselComponent } from '../carousel/carousel.component';
 import { SharedModule } from '../shared/shared.module';
 import { QuestComponent } from './pricing/quest/quest.component';
-import { FieldComponent } from './pricing/field/field.component';
 import { PricingSidebarComponent } from './pricing/pricing-sidebar/pricing-sidebar.component';
-
-
+import { FieldsModule } from './pricing/fields/fields.module';
 
 @NgModule({
   declarations: [
@@ -27,13 +25,8 @@ import { PricingSidebarComponent } from './pricing/pricing-sidebar/pricing-sideb
     ScrollableDirective,
     CarouselComponent,
     QuestComponent,
-    FieldComponent,
-    PricingSidebarComponent
+    PricingSidebarComponent,
   ],
-  imports: [
-    CommonModule,
-    NgxSmoothScrollModule,
-    SharedModule
-  ]
+  imports: [CommonModule, NgxSmoothScrollModule, SharedModule, FieldsModule],
 })
-export class MainpageModule { }
+export class MainpageModule {}

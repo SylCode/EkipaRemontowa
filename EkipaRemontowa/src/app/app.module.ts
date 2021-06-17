@@ -1,5 +1,4 @@
 import { SharedModule } from './shared/shared.module';
-import { IoService } from 'src/app/io.service';
 import { MainpageModule } from './mainpage/mainpage.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -12,6 +11,7 @@ import { InView } from './in-view.directive';
 import { HeaderComponent } from './mainpage/header/header.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { ContactComponent } from './contact/contact.component';
+import { IoService } from './services/io.service';
 
 @NgModule({
   declarations: [
@@ -19,7 +19,7 @@ import { ContactComponent } from './contact/contact.component';
     HeaderComponent,
     InView,
     AboutUsComponent,
-    ContactComponent
+    ContactComponent,
   ],
   imports: [
     BrowserModule,
@@ -27,9 +27,9 @@ import { ContactComponent } from './contact/contact.component';
     MainpageModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    SharedModule
+    SharedModule,
   ],
   providers: [IoService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

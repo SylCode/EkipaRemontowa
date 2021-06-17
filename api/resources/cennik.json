@@ -1,6 +1,6 @@
 [
     {
-        "key": "Prace elektryczne",
+        "key": "Prace_elektryczne",
         "value": [
             {
                 "id": 0,
@@ -26,69 +26,48 @@
         ]
     },
     {
-        "key": "Prace kafelkarskie",
+        "key": "Prace_kafelkarskie",
         "value": [
             {
                 "id": 0,
                 "name": "Montaż kafli w rozmiarze 20x20 lub mniejszych",
                 "pricePerUnit": 150,
                 "unit": "m2",
-                "visible": false
+                "visible": true
             },
             {
                 "id": 1,
                 "name": "Montaż kafli w rozmiarach od 30x30 do 120x60",
                 "pricePerUnit": 90,
                 "unit": "m2",
-                "visible": false
+                "visible": true
             },
             {
                 "id": 2,
                 "name": "Montaż kafli w rozmiarach większych niż 120x60",
                 "pricePerUnit": 130,
                 "unit": "m2",
-                "visible": false
+                "visible": true
             },
             {
                 "id": 3,
                 "name": "Montaż cokołów z kafli",
                 "pricePerUnit": 40,
                 "unit": "mb",
-                "visible": false
+                "visible": true
             },
             {
                 "id": 4,
                 "name": "Montaż mozaiki",
                 "pricePerUnit": 150,
                 "unit": "m2",
-                "visible": false
+                "visible": true
             }
         ]
     },
     {
-        "key": "Prace malarskie oraz gk",
+        "key": "Prace_malarskie",
         "value": [
-            {
-                "id": 0,
-                "name": "Montaż ścianek działowych z pł. g-k",
-                "pricePerUnit": 100,
-                "unit": "m2",
-                "visible": true
-            },
-            {
-                "id": 1,
-                "name": "Montaż sufitu podwieszanego",
-                "pricePerUnit": 90,
-                "unit": "m2",
-                "visible": true
-            },
-            {
-                "id": 2,
-                "name": "Szpachlowanie spoin ścian z płyt g-k (przygotowanie do malowania bez gładzi)",
-                "pricePerUnit": 10,
-                "unit": "m2",
-                "visible": false
-            },
             {
                 "id": 3,
                 "name": "Gruntowanie ścian farbą podkładową (należy doliczyć do ceny malowania)",
@@ -126,8 +105,34 @@
             }
         ]
     },
+	{
+        "key": "Prace_gk",
+        "value": [
+            {
+                "id": 0,
+                "name": "Montaż ścianek działowych z pł. g-k",
+                "pricePerUnit": 100,
+                "unit": "m2",
+                "visible": true
+            },
+            {
+                "id": 1,
+                "name": "Montaż sufitu podwieszanego",
+                "pricePerUnit": 90,
+                "unit": "m2",
+                "visible": true
+            },
+            {
+                "id": 2,
+                "name": "Szpachlowanie spoin ścian z płyt g-k (przygotowanie do malowania bez gładzi)",
+                "pricePerUnit": 10,
+                "unit": "m2",
+                "visible": false
+            }
+        ]
+    },
     {
-        "key": "Prace rozbiórkowe",
+        "key": "Prace_rozbiórkowe",
         "value": [
             {
                 "id": 0,
@@ -188,7 +193,7 @@
         ]
     },
     {
-        "key": "Prace montażowe",
+        "key": "Prace_montażowe",
         "value": [
             {
                 "id": 0,
@@ -221,7 +226,7 @@
         ]
     },
     {
-        "key": "Podłogi, posadzki, wylewki",
+        "key": "Podłogi_posadzki_wylewki",
         "value": [
             {
                 "id": 0,
@@ -254,7 +259,7 @@
         ]
     },
     {
-        "key": "PRACE W ŁAZIENCE",
+        "key": "Prace_w_łazience",
         "value": [
             {
                 "id": 0,
