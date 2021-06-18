@@ -17,6 +17,7 @@ import { Field } from './fields/field';
 import { ActivatedRoute, Data } from '@angular/router';
 import { BathFieldComponent } from './fields/bath-field/bath-field.component';
 import { KafleFieldComponent } from './fields/kafle-field/kafle-field.component';
+import { CreateComponentEvent } from './pricing-sidebar/pricing-sidebar.component';
 
 @Component({
   selector: 'app-pricing',
@@ -51,16 +52,16 @@ export class PricingComponent implements OnInit {
     this.cdr.detectChanges();
   }
 
-  public createComponent(selector: string[]) {
+  public createComponent(event: CreateComponentEvent) {
     this.componentService
-      .getComponentBySelector(selector[0], () =>
+      .getComponentBySelector(event.componentId, () =>
         import('./fields/fields.module').then((m) => m.FieldsModule)
       )
       .then((componentRef) => {
         console.log(componentRef);
           var fc = componentRef as ComponentRef<FieldComponent>;
-          fc.instance.pricelistName = selector[2];
-          fc.instance.displayName = selector[1];
+          fc.instance.pricelistName = event.priceListName;
+          fc.instance.displayName = event.title;
           fc.instance.init();
           this.container.insert(fc.hostView);
           this.cdr.detectChanges();

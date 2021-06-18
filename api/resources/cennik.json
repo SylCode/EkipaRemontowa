@@ -266,287 +266,287 @@
                 "name": "Zmiana umiejsowienia przyłączy do pralki",
                 "pricePerUnit": 350,
                 "unit": "szt",
-                "visible": false
+                "visible": true
             },
             {
                 "id": 1,
                 "name": "Zmiana umiejsowienia przyłączy do wc",
                 "pricePerUnit": 350,
                 "unit": "szt",
-                "visible": false
+                "visible": true
             },
             {
                 "id": 2,
                 "name": "Zmiana umiejsowienia przyłączy do grzejnika",
                 "pricePerUnit": 350,
                 "unit": "szt",
-                "visible": false
+                "visible": true
             },
             {
                 "id": 3,
                 "name": "Zmiana umiejsowienia przyłączy do umywalki ",
                 "pricePerUnit": 350,
                 "unit": "szt",
-                "visible": false
+                "visible": true
             },
             {
                 "id": 4,
                 "name": "Zmiana umiejscowienia przyłączy do prysznica ",
                 "pricePerUnit": 350,
                 "unit": "szt",
-                "visible": false
+                "visible": true
             },
             {
                 "id": 5,
                 "name": "Montaz grzejnika łazienkowego",
                 "pricePerUnit": 200,
                 "unit": "szt",
-                "visible": false
+                "visible": true
             },
             {
                 "id": 6,
                 "name": "Wkucie w ścianę przyłączy wodnych poprowadzonych natynkowo",
                 "pricePerUnit": 80,
                 "unit": "szt",
-                "visible": false
+                "visible": true
             },
             {
                 "id": 7,
                 "name": "Przeniesienie gniazd/włączników/oświetlenia",
                 "pricePerUnit": 90,
                 "unit": "szt",
-                "visible": false
+                "visible": true
             },
             {
                 "id": 8,
                 "name": "Montaż sufitu podwieszanego",
                 "pricePerUnit": 100,
                 "unit": "m2",
-                "visible": false
+                "visible": true
             },
             {
                 "id": 9,
                 "name": "dodatkowe punkty świetlne w suficie podwieszanym",
                 "pricePerUnit": 60,
                 "unit": "szt",
-                "visible": false
+                "visible": true
             },
             {
                 "id": 10,
                 "name": "Montaż zestawu podtynkowego wc, typu Geberit",
                 "pricePerUnit": 350,
                 "unit": "szt",
-                "visible": false
+                "visible": true
             },
             {
                 "id": 11,
                 "name": "Zabudowa g/k zestawu podtynkowego wc",
                 "pricePerUnit": 200,
                 "unit": "szt",
-                "visible": false
+                "visible": true
             },
             {
                 "id": 12,
                 "name": "Montaż odpływu liniowego",
                 "pricePerUnit": 450,
                 "unit": "szt",
-                "visible": false
+                "visible": true
             },
             {
                 "id": 13,
                 "name": "Montaż baterii umywalkowej natynkowej/naumywalkowej",
                 "pricePerUnit": 150,
                 "unit": "szt",
-                "visible": false
+                "visible": true
             },
             {
                 "id": 14,
                 "name": "Montaż baterii umywalkowej podtynkowej",
                 "pricePerUnit": 350,
                 "unit": "szt",
-                "visible": false
+                "visible": true
             },
             {
                 "id": 15,
                 "name": "Montaż baterii nawannowej",
                 "pricePerUnit": 400,
                 "unit": "szt",
-                "visible": false
+                "visible": true
             },
             {
                 "id": 16,
                 "name": "Montaż podtynkowej baterii prysznicowej wraz z deszczownicą",
                 "pricePerUnit": 450,
                 "unit": "szt",
-                "visible": false
+                "visible": true
             },
             {
                 "id": 17,
                 "name": "Montaż natynkowej baterii prysznicowej wraz z deszczownicą",
                 "pricePerUnit": 350,
                 "unit": "szt",
-                "visible": false
+                "visible": true
             },
             {
                 "id": 18,
                 "name": "Hydroizolacja łazienki folią w płynie oraz taśmą hydroizolacyjną",
                 "pricePerUnit": 450,
                 "unit": "szt",
-                "visible": false
+                "visible": true
             },
             {
                 "id": 19,
                 "name": "Montaz szyby prysznicowej typu Walk-in",
                 "pricePerUnit": 300,
                 "unit": "szt",
-                "visible": false
+                "visible": true
             },
             {
                 "id": 20,
                 "name": "Montaz podłogowej maty grzewczej",
                 "pricePerUnit": 500,
                 "unit": "szt",
-                "visible": false
+                "visible": true
             },
             {
                 "id": 21,
                 "name": "Budowa dodatkowych półek z G/k pod przysznicem",
                 "pricePerUnit": 200,
                 "unit": "szt",
-                "visible": false
+                "visible": true
             },
             {
                 "id": 22,
                 "name": "Montaż płytek podłogowych w łazience",
                 "pricePerUnit": 100,
                 "unit": "m2",
-                "visible": false
+                "visible": true
             },
             {
                 "id": 23,
                 "name": "Obudowa płytkami odpływu liniowego ze spadkiem",
                 "pricePerUnit": 300,
                 "unit": "szt",
-                "visible": false
+                "visible": true
             },
             {
                 "id": 24,
                 "name": "Montaż płytek ściennych wraz z docinaniem narożników pod kątem 45° ",
                 "pricePerUnit": 120,
                 "unit": "m2",
-                "visible": false
+                "visible": true
             },
             {
                 "id": 25,
                 "name": "Układanie cegły wraz z impregnacją i fugowaniem ",
                 "pricePerUnit": 170,
                 "unit": "m2",
-                "visible": false
+                "visible": true
             },
             {
                 "id": 26,
                 "name": "Gładź na ścianach lub sufitach ",
                 "pricePerUnit": 27,
                 "unit": "m2",
-                "visible": false
+                "visible": true
             },
             {
                 "id": 27,
                 "name": "Malowanie ścian lub sufitu",
                 "pricePerUnit": 20,
                 "unit": "m2",
-                "visible": false
+                "visible": true
             },
             {
                 "id": 28,
                 "name": "Montaż drobnych elementów wyposażenia (np: póleczka, uchwyt na papier)",
                 "pricePerUnit": 40,
                 "unit": "szt",
-                "visible": false
+                "visible": true
             },
             {
                 "id": 29,
                 "name": "Montaz standardowego lustra nawieszanego",
                 "pricePerUnit": 40,
                 "unit": "szt",
-                "visible": false
+                "visible": true
             },
             {
                 "id": 30,
                 "name": "Montaż lusra nawieszanego z podłączeniem wewnętrznego oświetlenia LED",
                 "pricePerUnit": 70,
                 "unit": "szt",
-                "visible": false
+                "visible": true
             },
             {
                 "id": 31,
                 "name": "Nałożenie fugi cementowej oraz silikonu w całej łazience",
                 "pricePerUnit": 500,
                 "unit": "szt",
-                "visible": false
+                "visible": true
             },
             {
                 "id": 32,
                 "name": "Montaż szafki podumywalkowej",
                 "pricePerUnit": 160,
                 "unit": "szt",
-                "visible": false
+                "visible": true
             },
             {
                 "id": 33,
                 "name": "Montaż wanny",
                 "pricePerUnit": 500,
                 "unit": "szt",
-                "visible": false
+                "visible": true
             },
             {
                 "id": 34,
                 "name": "Wykonanie zabudowy wanny z bloczków",
                 "pricePerUnit": 350,
                 "unit": "szt",
-                "visible": false
+                "visible": true
             },
             {
                 "id": 35,
                 "name": "Montaż misy wc",
                 "pricePerUnit": 200,
                 "unit": "szt",
-                "visible": false
+                "visible": true
             },
             {
                 "id": 36,
                 "name": "Montaż umywalki z podłączeniem syfonu",
                 "pricePerUnit": 190,
                 "unit": "szt",
-                "visible": false
+                "visible": true
             },
             {
                 "id": 37,
                 "name": "Montaż brodzika prysznicowego",
                 "pricePerUnit": 270,
                 "unit": "szt",
-                "visible": false
+                "visible": true
             },
             {
                 "id": 38,
                 "name": "Montaż kabiny prysznicowej otwieranej/przesuwnej",
                 "pricePerUnit": 350,
                 "unit": "szt",
-                "visible": false
+                "visible": true
             },
             {
                 "id": 39,
                 "name": "Montaz oświetlenie górnego",
                 "pricePerUnit": 50,
                 "unit": "szt",
-                "visible": false
+                "visible": true
             },
             {
                 "id": 40,
                 "name": "Montaż kinkietu",
                 "pricePerUnit": 50,
                 "unit": "szt",
-                "visible": false
+                "visible": true
             }
         ]
     },

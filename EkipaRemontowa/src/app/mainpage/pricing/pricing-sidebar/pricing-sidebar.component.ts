@@ -2,7 +2,7 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FaIconLibrary } from '@fortawesome/angular-fontawesome';
 import { faPlusSquare as farPlusSquare } from '@fortawesome/free-regular-svg-icons';
 
-interface CreateComponentEvent{
+export interface CreateComponentEvent{
   componentId: string;
   title: string;
   priceListName: string;

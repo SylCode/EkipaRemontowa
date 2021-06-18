@@ -3,10 +3,12 @@
     <div class="icon-container">
       <fa-icon class="img" size="2x" [icon]="faPlusSquare"></fa-icon>
     </div>
-    <div class="btn glassy">Prace łazienkowe</div>
+    <div class="btn glassy" (click)="createLazienkaComponent()">
+      Prace łazienkowe
+    </div>
     <div class="btn glassy">Malarskie</div>
     <div class="btn glassy">Podłogi</div>
-    <div class="btn glassy">Kafelkarskie</div>
+    <div class="btn glassy" (click)="createKafleComponent()">Kafelkarskie</div>
     <div class="btn glassy">Montaż</div>
     <div class="btn glassy">Pace rozbiorkowe</div>
     <div class="btn glassy">Elektryka</div>
