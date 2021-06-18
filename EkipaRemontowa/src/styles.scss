@@ -44,6 +44,29 @@ body {
   width: 100%;
 }
 
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted white;
+  .tooltiptext {
+    position: absolute;
+    z-index: -1;
+    visibility: visible;
+    width: 120px;
+    background-color: rgb(255, 115, 0);
+    color: white;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6%;
+    font-size: small;
+
+    &:hover {
+      visibility: visible;
+      transition: 0.5s;
+    }
+  }
+}
+
 .large-underscore {
   position: relative;
   text-align: left;

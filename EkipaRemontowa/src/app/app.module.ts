@@ -12,6 +12,7 @@ import { HeaderComponent } from './mainpage/header/header.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { ContactComponent } from './contact/contact.component';
 import { IoService } from './services/io.service';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { IoService } from './services/io.service';
     HttpClientModule,
     BrowserAnimationsModule,
     SharedModule,
+    FontAwesomeModule
   ],
   providers: [IoService],
   bootstrap: [AppComponent],

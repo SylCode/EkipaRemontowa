@@ -1,26 +1,64 @@
 .container {
   align-self: flex-start;
   position: relative;
-  width: min-content;
-  height: 100%;
   margin: 20px;
   word-wrap: normal;
   display: flex;
+  padding: 5px;
   flex-direction: column;
-  .button {
+
+  .menu {
+    width: 42px;
+    height: 48px;
     word-wrap: normal;
     white-space: break-spaces;
     font-size: 1.5em;
-    min-width: max-content;
-    margin: 10px 0px;
-    width: 90%;
-    height: min-content;
-    background-color: rgba(255, 123, 0, 0.192);
+    margin: 5px;
+    background-color: rgba(30, 255, 0, 0.11);
+    padding: 5px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 10px 15px 25px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
     transition: 0.2s;
-    &:hover {
+    .btn {
+      position: relative;
+      top: 0px;
+      margin: 10px;
+      color: transparent;
+      text-align: center;
+      font-size: 0.8em;
       cursor: pointer;
+      visibility: hidden;
+      white-space: nowrap;
+    }
+    &:hover {
+      height: fit-content;
+      width: 250px;
+      background: rgba(255, 255, 255, 0.1);
       transition: 0.2s;
-      background-color: rgba(255, 123, 0, 0.596);
+      cursor: auto;
+      .icon-container {
+        visibility: hidden;
+      }
+      .btn {
+        transition: 0.5s;
+        visibility: visible;
+        color: white;
+        background-color: rgba(255, 115, 0, 0.363);
+        &:hover {
+          background-color: rgba(255, 123, 0, 0.87);
+        }
+      }
     }
   }
+}
+.icon-container {
+  float: right;
+  align-content: center;
 }

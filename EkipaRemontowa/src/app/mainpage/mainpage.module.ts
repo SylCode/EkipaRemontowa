@@ -1,3 +1,4 @@
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SlideshowComponent } from './slideshow/slideshow.component';
@@ -27,6 +28,12 @@ import { FieldsModule } from './pricing/fields/fields.module';
     QuestComponent,
     PricingSidebarComponent
   ],
-  imports: [CommonModule, NgxSmoothScrollModule, SharedModule, FieldsModule],
+  imports: [
+    CommonModule, 
+    NgxSmoothScrollModule, 
+    SharedModule, 
+    FieldsModule,
+    FontAwesomeModule
+  ],
 })
 export class MainpageModule {}
