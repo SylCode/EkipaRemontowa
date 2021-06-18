@@ -1,6 +1,7 @@
 
 import { Component, OnInit, HostListener } from '@angular/core';
 import { Router } from '@angular/router';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { ScrollService } from 'src/scroll.service';
 
 @Component({
@@ -13,6 +14,7 @@ export class HeaderComponent implements OnInit {
 
   public mobileMenu: boolean = false;
   private screenWidth!: number;
+  faBars=faBars;
 
   @HostListener('window:resize', ['$event'])
   onResize(event?: Event) {

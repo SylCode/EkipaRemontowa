@@ -51,8 +51,65 @@
   width: 100vw;
 }
 
+.menu {
+  justify-self: flex-end;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 42px;
+  height: 48px;
+  word-wrap: normal;
+  white-space: break-spaces;
+  font-size: 1.5em;
+  margin: 5px;
+
+  padding: 5px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: 0.2s;
+  .icon-container {
+    float: right;
+    align-content: center;
+    visibility: visible;
+  }
+  .btn {
+    position: relative;
+    top: 0px;
+    margin: 10px;
+    color: transparent;
+    text-align: center;
+    font-size: 0.8em;
+    cursor: pointer;
+    visibility: hidden;
+    white-space: nowrap;
+  }
+  &:hover {
+    height: fit-content;
+    width: 250px;
+    background: rgba(255, 255, 255, 0.1);
+    transition: 0.2s;
+    cursor: auto;
+    .icon-container {
+      visibility: hidden;
+    }
+    .btn {
+      transition: 0.5s;
+      visibility: visible;
+      color: white;
+      &:hover {
+        color: rgb(39, 39, 39);
+        background-color: rgba(255, 255, 255, 0.87);
+      }
+    }
+  }
+}
+
 @media (max-width: 860px) {
   .hidden-sm {
     display: none;
+  }
+  .menu {
+    visibility: visible;
   }
 }

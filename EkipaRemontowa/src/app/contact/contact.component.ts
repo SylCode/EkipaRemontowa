@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { ScrollService } from 'src/scroll.service';
+import { faFacebook, faFacebookSquare } from '@fortawesome/free-brands-svg-icons';
 
 @Component({
   selector: 'app-contact',
