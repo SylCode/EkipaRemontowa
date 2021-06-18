@@ -80,6 +80,7 @@ section {
       white-space: nowrap;
     }
   }
+
   .wrapper {
     display: flex;
     flex-direction: row;
@@ -88,8 +89,8 @@ section {
     overflow-x: hidden;
     .item {
       padding: 5px 20px;
+      //flex-grow: 1;
       padding-left: 40px;
-      max-width: 30%;
       min-width: min-content;
     }
     hr {

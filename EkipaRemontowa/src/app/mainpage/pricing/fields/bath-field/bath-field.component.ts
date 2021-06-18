@@ -7,10 +7,11 @@ import { ChangeDetectorRef, Component, Inject, OnInit } from '@angular/core';
   templateUrl: '../field/field.component.html',
   styleUrls: ['../field/field.component.scss'],
 })
-export class BathFieldComponent extends FieldComponent {
+export class BathFieldComponent  extends FieldComponent implements OnInit {
   constructor(private dataServ: DataService, private cdref: ChangeDetectorRef) {
     super(dataServ, cdref);
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+  }
 }

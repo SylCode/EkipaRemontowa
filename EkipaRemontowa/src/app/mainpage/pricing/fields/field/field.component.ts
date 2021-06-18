@@ -19,7 +19,7 @@ import { IField } from '../IField';
 export class FieldComponent implements IField {
   public privateFields: Array<Field> = [];
   public publicFields: Array<Field> = [];
-  public price = 0;
+  public price = 1000;
 
   @Input() displayName!: string;
   @Input() pricelistName!: string;

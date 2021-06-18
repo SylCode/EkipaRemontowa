@@ -42,6 +42,7 @@ export class PricingComponent implements OnInit {
     this.dataService.setPriceList(this.route.snapshot.data.priceList);
   }
 
+  
   ngAfterViewInit(): void {
     this.scrollService.diableScroll();
     this.children.forEach((field) => {
@@ -56,13 +57,13 @@ export class PricingComponent implements OnInit {
         import('./fields/fields.module').then((m) => m.FieldsModule)
       )
       .then((componentRef) => {
-        if (typeof componentRef == typeof FieldComponent) {
+        console.log(componentRef);
           var fc = componentRef as ComponentRef<FieldComponent>;
           fc.instance.pricelistName = selector[2];
           fc.instance.displayName = selector[1];
           fc.instance.init();
           this.container.insert(fc.hostView);
-        }
+          this.cdr.detectChanges();
       });
   }
 }

@@ -1,57 +1,54 @@
-.wrapper {
-  h2 {
-    grid-column-start: 0;
-    grid-column-end: span 2;
-    white-space: nowrap;
-  }
-  .fields-container {
-    position: relative;
+h2 {
+  grid-column-start: 0;
+  grid-column-end: span 2;
+  white-space: nowrap;
+  margin: 20px;
+}
+.fields-container {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  min-width: min-content;
+  max-width: 600px;
+  margin-left: 20px;
+  //min-width: 510px;
+  .form {
     display: flex;
-    flex-wrap: wrap;
     flex-direction: row;
-    min-width: min-content;
-    //max-width: 30%;
-    //min-width: 510px;
-    .form {
-      display: flex;
-      flex-direction: row;
-      justify-content: flex-start;
-      flex-wrap: wrap;
-      width: 100%;
-      padding: 20px 0px;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 20px 0px;
+    transition: 0.2s;
+    .input-box {
+      margin: 0px 20px;
       transition: 0.2s;
-      .input-box {
-        margin: 0px 20px;
-        transition: 0.2s;
-        input {
-          margin-top: 5px;
-          margin-bottom: 5px;
-          background: rgba(255, 255, 255, 0.2);
-          border: none;
-          outline: none;
-          padding: 10px 20px;
-          border-radius: 10px;
-          border: 1px solid rgba(255, 255, 255, 0.5);
-          border-right: 1px solid rgba(255, 255, 255, 0.2);
-          border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-          letter-spacing: 1px;
-          font-size: 14px;
-          color: rgb(255, 255, 255);
-          &::placeholder {
-            color: rgba(255, 255, 255, 0.534);
-          }
-        }
-        &:nth-child(n + 1) {
-          //page-break-after: always;
-          page-break-before: always;
+      input {
+        margin-top: 5px;
+        margin-bottom: 5px;
+        background: rgba(255, 255, 255, 0.2);
+        border: none;
+        outline: none;
+        padding: 10px 20px;
+        border-radius: 10px;
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        border-right: 1px solid rgba(255, 255, 255, 0.2);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        letter-spacing: 1px;
+        font-size: 14px;
+        color: rgb(255, 255, 255);
+        &::placeholder {
+          color: rgba(255, 255, 255, 0.534);
         }
       }
     }
   }
-  .price {
-    margin-top: 20px;
-    font-size: 1.4rem;
-    white-space: nowrap;
-    align-self: center;
-  }
+}
+.price {
+  margin-top: 20px;
+  margin-left: 20px;
+  font-size: 1.4rem;
+  white-space: nowrap;
+  align-self: center;
 }

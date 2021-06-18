@@ -25,7 +25,7 @@ import { FieldsModule } from './pricing/fields/fields.module';
     ScrollableDirective,
     CarouselComponent,
     QuestComponent,
-    PricingSidebarComponent,
+    PricingSidebarComponent
   ],
   imports: [CommonModule, NgxSmoothScrollModule, SharedModule, FieldsModule],
 })
