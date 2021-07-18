@@ -14,6 +14,7 @@ import { SharedModule } from '../shared/shared.module';
 import { QuestComponent } from './pricing/quest/quest.component';
 import { PricingSidebarComponent } from './pricing/pricing-sidebar/pricing-sidebar.component';
 import { FieldsModule } from './pricing/fields/fields.module';
+import { ServicesComponent } from './services/services.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { FieldsModule } from './pricing/fields/fields.module';
     ScrollableDirective,
     CarouselComponent,
     QuestComponent,
-    PricingSidebarComponent
+    PricingSidebarComponent,
+    ServicesComponent
   ],
   imports: [
     CommonModule, 

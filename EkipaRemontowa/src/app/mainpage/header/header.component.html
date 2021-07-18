@@ -3,9 +3,29 @@
     EKIPA REMONTOWA
   </h1>
   <div class="noselect flex end hidden-sm" *ngIf="!mobileMenu">
-    <h2 class="noselect end" (click)="scroll('app-slideshow')">Galeria</h2>
-    <h2 class="noselect end" (click)="scroll('app-realizacje')">Realizacje</h2>
     <h2
+      *ngIf="moduleActive('Galeria')"
+      class="noselect end"
+      (click)="scroll('app-slideshow')"
+    >
+      Galeria
+    </h2>
+    <h2
+      *ngIf="moduleActive('Realizacje')"
+      class="noselect end"
+      (click)="scroll('app-realizacje')"
+    >
+      Realizacje
+    </h2>
+    <h2
+      *ngIf="moduleActive('Uslugi')"
+      class="noselect end"
+      (click)="scroll('app-services')"
+    >
+      Usługi
+    </h2>
+    <h2
+      *ngIf="moduleActive('Wycena')"
       class="noselect end"
       [routerLink]="['/pricing']"
       routerLinkActive="router-link-active"
@@ -13,6 +33,7 @@
       Wycena
     </h2>
     <h2
+      *ngIf="moduleActive('About')"
       class="noselect end"
       [routerLink]="['/about-us']"
       routerLinkActive="router-link-active"
@@ -20,6 +41,7 @@
       O nas
     </h2>
     <h2
+      *ngIf="moduleActive('Kontakt')"
       class="noselect end"
       [routerLink]="['/contact']"
       routerLinkActive="router-link-active"
@@ -32,10 +54,47 @@
     <div class="icon-container">
       <fa-icon class="img" size="2x" [icon]="faBars"></fa-icon>
     </div>
-    <div class="btn glassy" (click)="scroll('app-slideshow')">Galeria</div>
-    <div class="btn glassy" (click)="scroll('app-realizacje')">Realizacje</div>
-    <div class="btn glassy" [routerLink]="['/pricing']">Wycena</div>
-    <div class="btn glassy" [routerLink]="['/about-us']">O nas</div>
-    <div class="btn glassy" [routerLink]="['/contact']">Kontakt</div>
+    <div
+      *ngIf="moduleActive('Galeria')"
+      class="btn glassy"
+      (click)="scroll('app-slideshow')"
+    >
+      Galeria
+    </div>
+    <div
+      *ngIf="moduleActive('Realizacje')"
+      class="btn glassy"
+      (click)="scroll('app-realizacje')"
+    >
+      Realizacje
+    </div>
+    <div
+      *ngIf="moduleActive('Uslugi')"
+      class="btn glassy"
+      (click)="scroll('app-services')"
+    >
+      Usługi
+    </div>
+    <div
+      *ngIf="moduleActive('Wycena')"
+      class="btn glassy"
+      [routerLink]="['/pricing']"
+    >
+      Wycena
+    </div>
+    <div
+      *ngIf="moduleActive('About')"
+      class="btn glassy"
+      [routerLink]="['/about-us']"
+    >
+      O nas
+    </div>
+    <div
+      *ngIf="moduleActive('Kontakt')"
+      class="btn glassy"
+      [routerLink]="['/contact']"
+    >
+      Kontakt
+    </div>
   </div>
 </div>

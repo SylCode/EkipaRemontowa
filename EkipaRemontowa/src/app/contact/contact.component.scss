@@ -1,19 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Orbitron&display=swap");
 
-.grid {
-  display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
-  grid-template-rows: 1fr 1fr;
-  gap: 1em 2em;
-  grid-template-areas:
-    ". ."
-    ". .";
-}
-
 .wrapper {
-  width: 50vw;
-  height: 80vh;
+  width: 40vw;
+  min-width: max-content;
+  height: 60vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  overflow-y: auto;
 }
 
 h2,
@@ -34,17 +30,18 @@ h4 {
 }
 
 .contacts {
-  height: 80%;
   align-self: center;
   .field-container {
-    height: 70%;
     position: relative;
     display: flex;
     flex-flow: column;
     justify-content: space-evenly;
-    // .field {
-    //   margin-bottom: 20px;
-    // }
+    .field {
+      padding: 0;
+      padding-left: 5px;
+      margin: 0px 10px;
+      margin-bottom: 20px;
+    }
   }
   h2,
   h3 {
@@ -63,14 +60,78 @@ h4 {
   }
 }
 
+button {
+  width: 50%;
+  text-align: center;
+  font-family: "Poppins";
+  color: rgb(255, 255, 255);
+  letter-spacing: 1px;
+  font-size: 1em;
+  font-weight: 300;
+  background-color: rgba(180, 96, 0, 0.486);
+  margin-bottom: 10px;
+  transition: 0.25s;
+  &:hover {
+    transition: 0.25s;
+    background-color: rgb(180, 96, 0);
+  }
+}
+
+textarea {
+  padding-left: 10px;
+}
+
 section {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.contacts {
-  height: 80%;
+.order {
+  width: 60%;
+  min-width: max-content;
+}
+form {
+  width: 100%;
+  min-width: 300px;
+}
+input {
+  &::placeholder {
+    font-family: "Poppins";
+    color: rgb(185, 185, 185);
+    letter-spacing: 1px;
+    font-size: 1em;
+    font-weight: 300;
+  }
+}
+
+textarea {
+  &::placeholder {
+    font-family: "Poppins";
+    color: rgb(185, 185, 185);
+    letter-spacing: 1px;
+    font-size: 1em;
+    font-weight: 300;
+  }
+}
+
+#email,
+#body {
+  padding: 0;
+  font-family: "Poppins";
+  padding-left: 5px;
+  color: white;
+  letter-spacing: 1px;
+  font-size: 1em;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+#body {
+  min-width: 100%;
+  height: 150px;
+  white-space: normal;
+  word-wrap: normal;
 }
 
 .fb-container {
@@ -151,7 +212,7 @@ section {
     flex-direction: column;
   }
   .contacts {
-    height: 30%;
+    min-height: min-content;
   }
   .fb-container {
     width: 10rem;

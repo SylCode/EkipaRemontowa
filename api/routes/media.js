@@ -34,4 +34,9 @@ router.get('/realisations', function(req, res, next) {
   res.send(data);
 });
 
+router.get('/activemodules', function (req, res) {
+  data = fs.readFileSync('./resources/activeModules.json', { encoding: 'utf8', flag: 'r' });
+  res.send(data);
+})
+
 module.exports = router;

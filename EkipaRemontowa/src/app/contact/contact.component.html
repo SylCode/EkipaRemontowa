@@ -31,17 +31,31 @@
     </section>
     <div class="order glassy-dark">
       <h3>Zamów kontakt</h3>
-      <!-- <form [formGroup]="callMeForm" action="submit" (ng-submit)="callMe()">
+      <form (ng-submit)="callMe()">
         <input
           id="email"
-          type="text"
-          class="glassy"
+          type="email"
+          class="field glassy"
           placeholder="Adres e-mail"
+          [formControl]="emailControl"
         />
-        <button type="submit"></button>
-      </form> -->
+        <textarea
+          id="body"
+          type="text"
+          class="field glassy"
+          placeholder="Wiadomość"
+          [formControl]="bodyControl"
+        ></textarea>
+        <button
+          *ngIf="emailControl.value && bodyControl.value"
+          class="button glassy"
+          type="submit"
+          (click)="callMe()"
+        >
+          Wyślij
+        </button>
+      </form>
     </div>
-    <div class="message glassy-dark">Message</div>
   </div>
 </div>
 <app-footer class="bottom"></app-footer>

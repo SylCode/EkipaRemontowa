@@ -36,4 +36,12 @@ export class IoService {
         catchError((_: any) => of('Failed to get realisations info'))
       ) as Observable<Array<string>>;
   }
+
+  public getActiveModules(): Observable<Array<string>> | undefined {
+    return this.httpClient
+      .get<Array<string>>('/api/media/activemodules')
+      .pipe(
+        catchError((_: any) => of('Failed to get ActiveModulesList'))
+      ) as Observable<Array<string>>;
+  }
 }
