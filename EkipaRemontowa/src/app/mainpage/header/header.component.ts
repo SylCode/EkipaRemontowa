@@ -44,10 +44,15 @@ export class HeaderComponent implements OnInit {
   }
 
   public navigateTo(path: string, postScroll: string) {
-    if (path == '')
+    if (path == '') {
       this.router.navigate([path]).then(() => {
-        window.location.reload();
+        //window.location.reload();
+        this.scrollService.pendingScroll = postScroll;
+        this.scrollService.enableScroll();
       });
-    else this.router.navigate([path]);
+    } else {
+      this.scrollService.diableScroll();
+      this.router.navigate([path]);
+    }
   }
 }

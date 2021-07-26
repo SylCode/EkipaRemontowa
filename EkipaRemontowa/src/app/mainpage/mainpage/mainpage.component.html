@@ -1,18 +1,12 @@
 <div class="parallax" #wrapper>
   <app-content class="content" appScrollable></app-content>
-  <app-slideshow
-    *ngIf="moduleActive('Galeria')"
-    class="content"
-    appScrollable
-  ></app-slideshow>
-  <app-realizacje
-    *ngIf="moduleActive('Realizacje')"
-    class="content"
-    appScrollable
-  ></app-realizacje>
-  <app-services
-    *ngIf="moduleActive('Uslugi')"
-    class="content"
-    appScrollable
-  ></app-services>
+  <div [hidden]="!moduleActive('Galeria')">
+    <app-slideshow class="content" appScrollable></app-slideshow>
+  </div>
+  <div [hidden]="!moduleActive('Realizacje')">
+    <app-realizacje class="content" appScrollable></app-realizacje>
+  </div>
+  <div [hidden]="!moduleActive('Uslugi')">
+    <app-services class="content" appScrollable></app-services>
+  </div>
 </div>

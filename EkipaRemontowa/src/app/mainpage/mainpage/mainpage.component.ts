@@ -1,4 +1,6 @@
+import { ActivatedRoute } from '@angular/router';
 import {
+  AfterViewChecked,
   AfterViewInit,
   Component,
   ElementRef,
@@ -19,53 +21,59 @@ import { HeaderComponent } from '../header/header.component';
   templateUrl: './mainpage.component.html',
   styleUrls: ['./mainpage.component.scss'],
 })
-export class MainpageComponent implements OnInit, AfterViewInit, OnDestroy {
+export class MainpageComponent
+  implements OnInit, AfterViewInit, AfterViewChecked, OnDestroy
+{
   @ViewChildren(ScrollableDirective)
-  set ele1 (v: QueryList<ScrollableDirective>){
-    console.log('This element is set when ngIf = true');
+  set ele1(v: QueryList<ScrollableDirective>) {
     this.scrollableComponentList = v;
-  };
-  @ViewChild(HeaderComponent) set ele2(v:HeaderComponent){
-    console.log('This element is set when ngIf = true');
+  }
+
+  @ViewChild(HeaderComponent) set ele2(v: HeaderComponent) {
     this.header = v;
-  };
-  @ViewChild('wrapper') set ele3(v:ElementRef){
-    console.log('This element is set when ngIf = true');
+  }
+
+  @ViewChild('wrapper') set ele3(v: ElementRef) {
     this.basicScrollElRef = v;
-  };
+  }
 
   scrollableComponentList!: QueryList<ScrollableDirective>;
   header!: HeaderComponent;
   basicScrollElRef!: ElementRef;
   sub: Subscription = new Subscription();
-  
+
   private ActiveModules: Array<string> = new Array<string>();
 
-  constructor(private scrollService: ScrollService,
-    private ioService: IoService) {}
+  constructor(
+    private scrollService: ScrollService,
+    private ioService: IoService,
+    private activatedRoute: ActivatedRoute
+  ) {}
+
+  ngAfterViewChecked(): void {
+    console.log('View Rendered');
+    this.scrollService.enableScroll();
+  }
 
   ngOnInit(): void {
-    this.scrollService.enableScroll();
     this.ioService.getActiveModules()?.subscribe((res) => {
       this.ActiveModules = res;
     });
-    console.log('++++ngOnInit++++');
-    console.log(this.scrollableComponentList);
-    console.log(this.basicScrollElRef);
+    this.activatedRoute.queryParams.subscribe((params) => {
+      //this.scrollService.pendingScroll = params['postScroll'];
+    });
   }
 
   ngAfterViewInit(): void {
-    console.log('++++ngAfterViewInit++++');
-    this.scrollService.scrollList = this.scrollableComponentList.toArray();
     this.scrollService.containerRef = this.basicScrollElRef;
-    console.log(this.scrollableComponentList);
-    console.log(this.basicScrollElRef);
+    this.scrollService.initScrollService(
+      this.scrollableComponentList.toArray()
+    );
   }
 
   public moduleActive(name: string): boolean {
     return this.ActiveModules.indexOf(name) > -1;
   }
-
 
   ngOnDestroy() {}
 }
