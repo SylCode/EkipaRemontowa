@@ -1,1 +1,32 @@
-<p>services works!</p>
+<div id="group3" class="parallax__group">
+  <div class="info parallax__layer parallax__layer--base">
+    <p class="centered">Oferowane usługi</p>
+  </div>
+  <div class="wrapper parallax__layer parallax__layer--base">
+    <div id="slide-up" class="color"></div>
+    <div id="slide-left" class="color"></div>
+    <div id="slide-right" class="color"></div>
+    <ul class="bg-bubbles">
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+  </div>
+  <div class="parallax__layer parallax__layer--fore">
+    <div class="box centered">
+      <ol>
+        <li *ngFor="let item of items">{{ item }}</li>
+      </ol>
+    </div>
+  </div>
+  <div class="parallax__layer parallax__layer--base">
+    <app-footer class="bottom"></app-footer>
+  </div>
+</div>

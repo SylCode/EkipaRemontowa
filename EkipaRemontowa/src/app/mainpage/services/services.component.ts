@@ -7,7 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./services.component.scss'],
 })
 export class ServicesComponent implements OnInit {
-  constructor(private ioService: IoService) {}
+  public items: string[] = [];
+  constructor(private ioService: IoService) {
+    this.ioService.getServices().subscribe((data) => {
+      this.items = data;
+    });
+  }
 
   ngOnInit(): void {}
 }

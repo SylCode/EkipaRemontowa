@@ -1,9 +1,9 @@
 .header {
   border-style: none;
   background: none;
-  backdrop-filter: blur(5px);
   height: 6%;
   z-index: 10;
+  border-bottom: 1px white solid;
   h1,
   h2 {
     text-align: center;
@@ -68,11 +68,11 @@
   border: none;
   outline: none;
   cursor: pointer;
+  visibility: hidden;
   transition: 0.2s;
   .icon-container {
     float: right;
     align-content: center;
-    visibility: visible;
   }
   .btn {
     position: relative;
@@ -109,7 +109,7 @@
   }
 }
 
-@media (max-width: 860px) {
+@media (max-width: 1150px) {
   .hidden-sm {
     display: none;
   }

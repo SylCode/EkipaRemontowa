@@ -2,7 +2,7 @@
   <h1 class="noselect start" (click)="scroll('app-content')">
     EKIPA REMONTOWA
   </h1>
-  <div class="noselect flex end hidden-sm" *ngIf="!mobileMenu">
+  <div class="noselect flex end hidden-sm">
     <h2
       *ngIf="moduleActive('Galeria')"
       class="noselect end"
@@ -50,7 +50,7 @@
     </h2>
   </div>
 
-  <div class="menu" *ngIf="mobileMenu">
+  <div class="menu">
     <div class="icon-container">
       <fa-icon class="img" size="2x" [icon]="faBars"></fa-icon>
     </div>

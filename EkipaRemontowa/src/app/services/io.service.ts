@@ -37,6 +37,14 @@ export class IoService {
       ) as Observable<Array<string>>;
   }
 
+  public getServices(): Observable<Array<string>> {
+    return this.httpClient
+      .get<Array<string>>('api/media/services')
+      .pipe(
+        catchError((_: any) => of('Failed to get services info'))
+      ) as Observable<Array<string>>;
+  }
+
   public getActiveModules(): Observable<Array<string>> | undefined {
     return this.httpClient
       .get<Array<string>>('/api/media/activemodules')
