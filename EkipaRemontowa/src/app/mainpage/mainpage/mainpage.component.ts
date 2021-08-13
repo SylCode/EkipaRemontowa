@@ -51,8 +51,7 @@ export class MainpageComponent
   ) {}
 
   ngAfterViewChecked(): void {
-    console.log('View Rendered');
-    this.scrollService.enableScroll();
+    //console.log('View Rendered');
   }
 
   ngOnInit(): void {
@@ -60,7 +59,7 @@ export class MainpageComponent
       this.ActiveModules = res;
     });
     this.activatedRoute.queryParams.subscribe((params) => {
-      //this.scrollService.pendingScroll = params['postScroll'];
+      this.scrollService.pendingScroll = params['postScroll'];
     });
   }
 
@@ -69,6 +68,7 @@ export class MainpageComponent
     this.scrollService.initScrollService(
       this.scrollableComponentList.toArray()
     );
+    this.scrollService.enableScroll();
   }
 
   public moduleActive(name: string): boolean {

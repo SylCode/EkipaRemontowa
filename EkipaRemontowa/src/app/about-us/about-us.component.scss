@@ -1,8 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
-
 .container {
   width: 100%;
   height: 100%;
+  overflow: auto;
   background: linear-gradient(to bottom, #2e2e2e, #000000);
 
   .circle {
@@ -36,7 +35,6 @@
     height: 80%;
     position: relative;
     display: flex;
-    flex-direction: row;
     background: rgba(255, 255, 255, 0.1);
     border-radius: 10px;
     -webkit-backdrop-filter: blur(11px);
@@ -65,14 +63,13 @@
     .imageContainer {
       //   border: 3px rgb(0, 255, 106) solid;
       overflow: hidden;
-      min-width: 30%;
+      max-width: 50%;
       .photo {
         display: block;
         margin-left: auto;
         margin-right: auto;
-        height: auto;
         object-fit: none;
-        object-position: center;
+        object-position: top;
         width: 100%;
         height: 100%;
       }
@@ -92,4 +89,72 @@
   border-right: 1px solid rgba(255, 255, 255, 0.2);
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 10px;
+}
+
+@media (max-width: 1150px) {
+  .text {
+    font-size: 1.2rem !important;
+    max-width: 90% !important;
+    margin-top: 20px;
+  }
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100% !important;
+
+    .imageContainer {
+      max-width: 90% !important;
+      max-height: 40% !important;
+      margin: auto !important;
+
+      .photo {
+        object-fit: cover !important;
+        object-position: top !important;
+      }
+    }
+  }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+  .wrapper {
+    flex-direction: column;
+    .text {
+      font-size: 1rem !important;
+      max-width: 90% !important;
+      margin-top: 20px;
+    }
+
+    .imageContainer {
+      max-width: 90% !important;
+      max-height: 40% !important;
+      margin: auto !important;
+
+      .photo {
+        object-fit: cover !important;
+        object-position: top !important;
+      }
+    }
+  }
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+  .wrapper {
+    flex-direction: column;
+    .text {
+      max-width: 90% !important;
+      margin-top: 20px;
+      font-size: 1rem !important;
+    }
+
+    .imageContainer {
+      max-width: 90% !important;
+      max-height: 40% !important;
+      margin: auto !important;
+
+      .photo {
+        object-fit: cover !important;
+        object-position: top !important;
+      }
+    }
+  }
 }

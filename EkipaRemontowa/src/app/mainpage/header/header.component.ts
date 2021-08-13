@@ -48,7 +48,6 @@ export class HeaderComponent implements OnInit {
       this.router.navigate([path]).then(() => {
         //window.location.reload();
         this.scrollService.pendingScroll = postScroll;
-        this.scrollService.enableScroll();
       });
     } else {
       this.scrollService.diableScroll();

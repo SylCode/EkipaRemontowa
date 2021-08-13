@@ -14,6 +14,8 @@ import { ContactComponent } from './contact/contact.component';
 import { IoService } from './services/io.service';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MapsComponent } from './contact/maps/maps.component';
+import { GoogleMapsModule } from '@angular/google-maps';
 
 @NgModule({
   declarations: [
@@ -22,6 +24,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     InView,
     AboutUsComponent,
     ContactComponent,
+    MapsComponent,
   ],
   imports: [
     BrowserModule,
@@ -33,6 +36,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     FontAwesomeModule,
     FormsModule,
     ReactiveFormsModule,
+    GoogleMapsModule,
   ],
   providers: [IoService],
   bootstrap: [AppComponent],

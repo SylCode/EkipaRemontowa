@@ -1,23 +1,27 @@
 declare var require: any;
 import { Component, OnInit } from '@angular/core';
-import { IoService } from '../services/io.service';
-
+import { Image } from '@fnxone/ngx-photoswipe';
+import { IoService } from 'src/app/services/io.service';
 @Component({
   selector: 'app-carousel',
   templateUrl: './carousel.component.html',
   styleUrls: ['./carousel.component.scss'],
 })
 export class CarouselComponent implements OnInit {
+  public slideIndex = 1;
   constructor(private ioService: IoService) {
-    const carousel = require('../../carousel.js');
     this.images = [];
   }
 
-  public images: Array<string>;
+  public images: Image[];
+
   ngOnInit(): void {
     this.ioService.getGalleryList().subscribe((data) => {
       data.forEach((file: string) => {
-        this.images.push('../../assets/Galery/' + file);
+        this.images.push({
+          img: '../../assets/Galery/' + file,
+          thumb: 'Image',
+        });
       });
     });
   }
