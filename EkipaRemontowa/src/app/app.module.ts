@@ -20,7 +20,6 @@ import { GoogleMapsModule } from '@angular/google-maps';
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
     InView,
     AboutUsComponent,
     ContactComponent,

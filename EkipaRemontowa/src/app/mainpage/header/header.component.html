@@ -1,4 +1,4 @@
-<div class="header flex sticky">
+<div #header class="header flex sticky">
   <h1 class="noselect start" (click)="scroll('app-content')">
     EKIPA REMONTOWA
   </h1>
@@ -6,21 +6,21 @@
     <h2
       *ngIf="moduleActive('Galeria')"
       class="noselect end"
-      (click)="scroll('app-slideshow')"
+      (click)="scroll('app-slideshow'); header.focus()"
     >
       Galeria
     </h2>
     <h2
       *ngIf="moduleActive('Realizacje')"
       class="noselect end"
-      (click)="scroll('app-realizacje')"
+      (click)="scroll('app-realizacje'); header.focus()"
     >
       Realizacje
     </h2>
     <h2
       *ngIf="moduleActive('Uslugi')"
       class="noselect end"
-      (click)="scroll('app-services')"
+      (click)="scroll('app-services'); header.focus()"
     >
       Usługi
     </h2>

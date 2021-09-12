@@ -1,17 +1,22 @@
 .header {
   border-style: none;
-  background: none;
+  background: rgba(54, 54, 54, 0.418);
   height: 6%;
   z-index: 10;
   border-bottom: 1px white solid;
+  h1 {
+    font-size: 2.6em;
+  }
+  h2 {
+    font-size: 1.8em;
+  }
   h1,
   h2 {
     text-align: center;
     white-space: nowrap;
     letter-spacing: 0.07rem;
-    transition: 0.3s;
+    transition: 0.1s;
     cursor: pointer;
-    //text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
     &.start {
       font-weight: bold;
       margin-right: auto;
@@ -24,19 +29,19 @@
       font-weight: 600;
       padding: 0.8rem 1rem;
       &:hover {
-        transition: 0.3s;
+        transition: 0.1s;
         background: rgba(255, 255, 255, 0.048);
         backdrop-filter: blur(5px);
         color: white;
         box-shadow: 0 25px 25px rgba(0, 0, 0, 0.3);
       }
-      transition: 0.3s;
+      transition: 0.1s;
     }
   }
 }
 
 .dark-text {
-  color: rgb(22, 22, 22);
+  color: rgb(54, 54, 54);
 }
 
 .flex {
@@ -56,49 +61,48 @@
   justify-self: flex-end;
   position: absolute;
   top: 0px;
-  right: 0px;
-  width: 42px;
+  width: auto;
   height: 48px;
   word-wrap: normal;
   white-space: break-spaces;
-  font-size: 1.5em;
-  margin: 5px;
+  font-size: 0.8em;
+  right: 0px;
 
   padding: 5px;
   border: none;
   outline: none;
   cursor: pointer;
   visibility: hidden;
-  transition: 0.2s;
+  transition: 0.1s;
   .icon-container {
     float: right;
     align-content: center;
+    margin-right: 10px;
   }
   .btn {
     position: relative;
     top: 0px;
-    margin: 10px;
+    //margin: 10px;
     color: transparent;
     text-align: center;
-    font-size: 0.8em;
+    font-size: 0.7em;
     cursor: pointer;
     visibility: hidden;
     white-space: nowrap;
   }
   &:hover {
     height: fit-content;
-    top: 20px;
-    right: 0px;
-    width: 250px;
-    background: rgba(26, 14, 0, 0.9);
+    top: 50px;
+    width: 100%;
+    background: rgba(83, 50, 0, 0.568);
     border-radius: 5px;
-    transition: 0.2s;
+    transition: 0.1s;
     cursor: auto;
     .icon-container {
       visibility: hidden;
     }
     .btn {
-      transition: 0.5s;
+      transition: 0.1s;
       visibility: visible;
       color: white;
       &:hover {
@@ -113,7 +117,18 @@
   .hidden-sm {
     display: none;
   }
+  .btn {
+    font-size: 1em !important;
+  }
   .menu {
     visibility: visible;
+    font-size: 1.9em;
+    display: flex;
+    flex-direction: column;
+  }
+  .icon-container {
+    float: right;
+    position: absolute;
+    right: 10px;
   }
 }

@@ -1,8 +1,8 @@
 <div class="parallax" #wrapper>
+  <app-header></app-header>
   <app-content class="content" appScrollable></app-content>
   <div [hidden]="!moduleActive('Galeria')">
     <app-slideshow class="content" appScrollable></app-slideshow>
-    <ngxps-lightbox></ngxps-lightbox>
   </div>
   <div [hidden]="!moduleActive('Realizacje')">
     <app-realizacje class="content" appScrollable></app-realizacje>
@@ -10,4 +10,5 @@
   <div [hidden]="!moduleActive('Uslugi')">
     <app-services class="content" appScrollable></app-services>
   </div>
+  <app-footer></app-footer>
 </div>

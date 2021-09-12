@@ -1,3 +1,4 @@
+<app-header></app-header>
 <div class="container grid">
   <div class="circle-reflect"></div>
   <div class="ground"></div>
@@ -14,10 +15,6 @@
       <div class="field glassy">
         <h4>E-mail:</h4>
         <p>{{ email }}</p>
-      </div>
-      <div class="field glassy">
-        <h4>Tel.kom:</h4>
-        <p class="number">{{ telephone }}</p>
       </div>
     </div>
   </div>
@@ -56,7 +53,9 @@
       </button>
     </form>
   </div>
-  <app-maps class="maps"></app-maps>
+  <div class="maps">
+    <app-maps></app-maps>
+  </div>
   <br />
   <br />
   <br />

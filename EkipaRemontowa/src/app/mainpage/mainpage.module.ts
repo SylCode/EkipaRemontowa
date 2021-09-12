@@ -1,3 +1,4 @@
+import { HeaderComponent } from './header/header.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -16,6 +17,8 @@ import { PricingSidebarComponent } from './pricing/pricing-sidebar/pricing-sideb
 import { FieldsModule } from './pricing/fields/fields.module';
 import { ServicesComponent } from './services/services.component';
 import { NgxPhotoswipeModule } from '@fnxone/ngx-photoswipe';
+import { DragScrollModule } from 'ngx-drag-scroll';
+import { AppRoutingModule } from '../app-routing.module';
 
 @NgModule({
   declarations: [
@@ -30,14 +33,17 @@ import { NgxPhotoswipeModule } from '@fnxone/ngx-photoswipe';
     QuestComponent,
     PricingSidebarComponent,
     ServicesComponent,
+    HeaderComponent,
   ],
   imports: [
     CommonModule,
     NgxSmoothScrollModule,
+    AppRoutingModule,
     SharedModule,
     FieldsModule,
     FontAwesomeModule,
-    NgxPhotoswipeModule,
+    DragScrollModule,
   ],
+  exports: [HeaderComponent],
 })
 export class MainpageModule {}

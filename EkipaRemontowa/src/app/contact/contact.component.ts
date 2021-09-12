@@ -13,7 +13,7 @@ import {
   styleUrls: ['./contact.component.scss'],
 })
 export class ContactComponent implements OnInit {
-  public telephone = '+48 570 503 127';
+  public telephone = '+48 518 730 157';
   public email = 'ekiparemontowa2@gmail.com';
   public fbLink = 'https://www.facebook.com/profile.php?id=100054263510773';
   public emailControl = new FormControl();

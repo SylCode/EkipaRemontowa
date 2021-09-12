@@ -9,20 +9,26 @@ import { IoService } from 'src/app/services/io.service';
 })
 export class CarouselComponent implements OnInit {
   public slideIndex = 1;
+  public imagesLoaded: Promise<boolean> | undefined;
   constructor(private ioService: IoService) {
     this.images = [];
+    this.GetImagesSubscription();
   }
 
   public images: Image[];
 
-  ngOnInit(): void {
+  GetImagesSubscription(): void {
     this.ioService.getGalleryList().subscribe((data) => {
       data.forEach((file: string) => {
         this.images.push({
-          img: '../../assets/Galery/' + file,
+          img: '../../Galery/' + file,
           thumb: 'Image',
         });
       });
+      console.log(this.images);
+      this.imagesLoaded = Promise.resolve(true);
     });
   }
+
+  ngOnInit(): void {}
 }

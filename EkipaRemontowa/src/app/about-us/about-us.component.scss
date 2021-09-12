@@ -3,6 +3,7 @@
   height: 100%;
   overflow: auto;
   background: linear-gradient(to bottom, #2e2e2e, #000000);
+  overflow-x: hidden !important;
 
   .circle {
     filter: blur(200px);
@@ -61,6 +62,7 @@
       }
     }
     .imageContainer {
+      margin: auto;
       //   border: 3px rgb(0, 255, 106) solid;
       overflow: hidden;
       max-width: 50%;
@@ -140,15 +142,19 @@
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
   .wrapper {
     flex-direction: column;
+    max-width: 90%;
+    overflow-x: hidden !important;
     .text {
       max-width: 90% !important;
       margin-top: 20px;
-      font-size: 1rem !important;
+      font-size: 1.3rem !important;
     }
 
     .imageContainer {
       max-width: 90% !important;
       max-height: 40% !important;
+      min-width: 200px;
+      min-height: 200px;
       margin: auto !important;
 
       .photo {
