@@ -1,6 +1,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import axios from 'axios';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 
 const httpOptions = {
   headers: new HttpHeaders({
@@ -14,15 +15,11 @@ const httpOptions = {
 export class ContactService {
   constructor(private httpClient: HttpClient) {}
 
-  public requestContact(message: string, email: string) {
-    this.httpClient
-      .post(
-        '/api/contact/request-contact',
-        { email: email, message: message },
-        httpOptions
-      )
-      .subscribe((response) => {
-        console.log(response);
-      });
+  public requestContact(message: string, email: string): Observable<Object> {
+    return this.httpClient.post(
+      '/api/contact/request-contact',
+      { email: email, message: message },
+      httpOptions
+    );
   }
 }

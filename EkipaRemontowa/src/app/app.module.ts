@@ -16,6 +16,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MapsComponent } from './contact/maps/maps.component';
 import { GoogleMapsModule } from '@angular/google-maps';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,10 @@ import { GoogleMapsModule } from '@angular/google-maps';
     ReactiveFormsModule,
     GoogleMapsModule,
   ],
-  providers: [IoService],
+  providers: [
+    IoService,
+    { provide: LocationStrategy, useClass: HashLocationStrategy },
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

@@ -22,6 +22,7 @@ export class ContactComponent implements OnInit {
     email: this.emailControl,
     body: this.bodyControl,
   });
+  public emailSent: boolean = false;
 
   constructor(
     private scrollService: ScrollService,
@@ -38,10 +39,10 @@ export class ContactComponent implements OnInit {
   }
 
   public callMe() {
-    console.log('CallMMEEEEEEEE');
-    this.contactService.requestContact(
-      this.bodyControl.value,
-      this.emailControl.value
-    );
+    this.contactService
+      .requestContact(this.bodyControl.value, this.emailControl.value)
+      .subscribe((response) => {
+        if (response == 'Success') this.emailSent = true;
+      });
   }
 }

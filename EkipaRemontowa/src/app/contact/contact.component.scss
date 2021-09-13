@@ -98,6 +98,7 @@ h4 {
 
 button {
   width: 50%;
+  transition: 0.5s;
   text-align: center;
   font-family: "Poppins";
   color: rgb(255, 255, 255);
@@ -111,6 +112,14 @@ button {
     transition: 0.25s;
     background-color: rgb(180, 96, 0);
   }
+}
+.success {
+  transition: 0.5s;
+  width: 50%;
+  background: rgb(39 137 0 / 85%);
+  font-size: 1em;
+  text-align: center;
+  margin-bottom: 10px;
 }
 
 .bottom {

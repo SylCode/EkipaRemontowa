@@ -47,7 +47,6 @@
     .text {
       overflow-y: auto;
       text-justify: inter-ideograph;
-      max-width: 50%;
       padding: 0px 40px;
       margin-left: auto;
       margin-right: auto;
@@ -66,6 +65,7 @@
       //   border: 3px rgb(0, 255, 106) solid;
       overflow: hidden;
       max-width: 50%;
+      max-height: 40%;
       .photo {
         display: block;
         margin-left: auto;

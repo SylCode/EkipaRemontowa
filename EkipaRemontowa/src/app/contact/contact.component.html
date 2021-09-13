@@ -44,13 +44,14 @@
         [formControl]="bodyControl"
       ></textarea>
       <button
-        *ngIf="emailControl.value && bodyControl.value"
+        *ngIf="emailControl.value && bodyControl.value && !emailSent"
         class="button glassy"
         type="submit"
         (click)="callMe()"
       >
         Wyślij
       </button>
+      <div class="success glassy" *ngIf="emailSent">Wysłane</div>
     </form>
   </div>
   <div class="maps">
