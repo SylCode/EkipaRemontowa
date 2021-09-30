@@ -1,9 +1,8 @@
 # DO NOT REMOVE. CLOUDLINUX PASSENGER CONFIGURATION BEGIN
-PassengerAppRoot "/home/p573808/api"
+PassengerAppRoot "/home/p573808/repos/api"
 PassengerBaseURI "/api"
-PassengerNodejs "/home/p573808/nodevenv/api/14/bin/node"
+PassengerNodejs "/home/p573808/nodevenv/repos/api/14/bin/node"
 PassengerAppType node
 PassengerStartupFile app.js
-PassengerAppLogFile "/home/p573808/api.log"
+PassengerAppLogFile "/home/p573808/repos/api/logs/log.log"
 # DO NOT REMOVE. CLOUDLINUX PASSENGER CONFIGURATION END
-Options -Indexes

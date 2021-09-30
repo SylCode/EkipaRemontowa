@@ -21,8 +21,14 @@ app.use('/api/media/reservation', media);
 app.use('/api/media/realisations', media);
 app.use('/api/pricer', pricer);
 app.use('/api/contact', contact);
+app.get('/api', (req, res) => {
+  res.send(`API is running on port ${port}`);
+});
+app.get('/', (req, res) => {
+  res.send(`API is running on port ${port}`);
+});
 
 app.listen(port, () => {
-    console.log(`API http://localhost:${port}`)
-  })
+  console.log(`API http://localhost:${port}`)
+})
 module.exports = app;

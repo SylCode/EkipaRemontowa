@@ -1,7 +1,11 @@
-<div class="container-fluid" *ngIf="imagesLoaded | async">
-  <drag-scroll class="imageContainer" [drag-scroll-y-disabled]="true">
-    <div drag-scroll-item class="image" *ngFor="let item of images">
-      <img src="{{ item.img }}" />
-    </div>
-  </drag-scroll>
+<div class="container-fluid">
+  <div id="carousel" class="main-carousel">
+    <!-- <div class="carousel-cell" *ngFor="let item of images"> -->
+    <img
+      class="carousel-cell"
+      *ngFor="let item of images"
+      src="{{ item.img }}"
+    />
+    <!-- </div> -->
+  </div>
 </div>

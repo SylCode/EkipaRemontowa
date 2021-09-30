@@ -1,9 +1,9 @@
 .header {
   border-style: none;
-  background: rgba(54, 54, 54, 0.418);
-  height: 6%;
+  background: rgb(56 56 56);
   z-index: 10;
   border-bottom: 1px white solid;
+  text-transform: uppercase;
   h1 {
     font-size: 2.6em;
   }
@@ -57,78 +57,161 @@
   width: 100vw;
 }
 
-.menu {
+.mobile-menu {
   justify-self: flex-end;
-  position: absolute;
   top: 0px;
-  width: auto;
-  height: 48px;
+  width: 48px;
   word-wrap: normal;
   white-space: break-spaces;
   font-size: 0.8em;
   right: 0px;
-
-  padding: 5px;
+  z-index: 20;
   border: none;
   outline: none;
   cursor: pointer;
   visibility: hidden;
-  transition: 0.1s;
+
   .icon-container {
-    float: right;
-    align-content: center;
-    margin-right: 10px;
+    transition: 0.5s;
   }
   .btn {
-    position: relative;
+    position: absolute;
+    width: 0px;
+    height: 0px;
     top: 0px;
-    //margin: 10px;
     color: transparent;
-    text-align: center;
-    font-size: 0.7em;
     cursor: pointer;
     visibility: hidden;
-    white-space: nowrap;
+    color: rgba(255, 255, 255, 0);
+    background: rgba(32, 32, 32, 0);
   }
   &:hover {
-    height: fit-content;
-    top: 50px;
     width: 100%;
-    background: rgba(83, 50, 0, 0.568);
+    height: fit-content;
+    position: absolute;
+    background: rgba(32, 32, 32, 0.904);
     border-radius: 5px;
-    transition: 0.1s;
     cursor: auto;
+    transition: 0.5s;
     .icon-container {
+      transform: translateX(-20px) rotate(270deg);
+      transition: 0.8s;
+      width: 0px;
+      height: 0px;
       visibility: hidden;
     }
     .btn {
-      transition: 0.1s;
       visibility: visible;
+      position: relative;
+      width: auto;
+      height: auto;
+      margin: 10px;
+      transition: 0.5s;
+      text-align: center;
+      font-size: 0.7em;
+      padding: 5px;
+      font-weight: 600;
+      white-space: nowrap;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
       color: white;
       &:hover {
         color: rgb(39, 39, 39);
-        background-color: rgba(255, 255, 255, 0.87);
+        background-color: rgba(255, 153, 0, 0.87);
       }
     }
   }
 }
 
-@media (max-width: 1150px) {
+@media (max-width: 1000px) {
+  fa-icon {
+    height: max-content;
+    width: max-content;
+  }
   .hidden-sm {
     display: none;
   }
   .btn {
     font-size: 1em !important;
   }
-  .menu {
+  .mobile-menu {
     visibility: visible;
-    font-size: 1.9em;
+    font-size: 1.4em;
     display: flex;
     flex-direction: column;
   }
   .icon-container {
     float: right;
-    position: absolute;
-    right: 10px;
+    font-size: 1.2em;
+  }
+  .header {
+    font-size: 0.8em !important;
+  }
+  .start {
+    margin-left: 0px !important;
+  }
+}
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 767px) {
+  .btn {
+    font-size: 1.2em !important;
+  }
+  .start {
+    margin-left: 0px !important;
+  }
+  .mobile-menu {
+    visibility: visible;
+    margin-top: 0%;
+    padding: 0%;
+    font-size: 1.2em !important;
+    display: flex;
+    flex-direction: column;
+  }
+  .header {
+    font-size: 1em !important;
+  }
+  h1 {
+    font-size: 2.3em !important;
+  }
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+  .btn {
+    font-size: 1.2em !important;
+  }
+  .start {
+    margin-left: 0px !important;
+  }
+  .mobile-menu {
+    visibility: visible;
+    font-size: 1.4em;
+    display: flex;
+    flex-direction: column;
+  }
+  .icon-container {
+    float: right;
+  }
+  .header {
+    font-size: 1.2em !important;
+  }
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 40/71) {
+  .btn {
+    font-size: 1.2em !important;
+  }
+  .start {
+    margin-left: 0px !important;
+  }
+  .mobile-menu {
+    visibility: visible;
+    margin-top: 2%;
+    padding: 0%;
+    font-size: 1.4em;
+    display: flex;
+    flex-direction: column;
+  }
+  .header {
+    font-size: 1em !important;
   }
 }

@@ -16,8 +16,6 @@ import { QuestComponent } from './pricing/quest/quest.component';
 import { PricingSidebarComponent } from './pricing/pricing-sidebar/pricing-sidebar.component';
 import { FieldsModule } from './pricing/fields/fields.module';
 import { ServicesComponent } from './services/services.component';
-import { NgxPhotoswipeModule } from '@fnxone/ngx-photoswipe';
-import { DragScrollModule } from 'ngx-drag-scroll';
 import { AppRoutingModule } from '../app-routing.module';
 
 @NgModule({
@@ -42,7 +40,6 @@ import { AppRoutingModule } from '../app-routing.module';
     SharedModule,
     FieldsModule,
     FontAwesomeModule,
-    DragScrollModule,
   ],
   exports: [HeaderComponent],
 })

@@ -1,4 +1,4 @@
-<div #header class="header flex sticky">
+<div #header class="header flex">
   <h1 class="noselect start" (click)="scroll('app-content')">
     EKIPA REMONTOWA
   </h1>
@@ -50,8 +50,8 @@
     </h2>
   </div>
 
-  <div class="menu">
-    <div class="icon-container">
+  <div class="mobile-menu" *ngIf="mobileMenu">
+    <div class="icon-container" onclick="">
       <fa-icon class="img" size="2x" [icon]="faBars"></fa-icon>
     </div>
     <div

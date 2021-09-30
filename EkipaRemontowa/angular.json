@@ -72,7 +72,8 @@
           },
           "configurations": {
             "production": {
-              "browserTarget": "EkipaRemontowa:build:production"
+              "browserTarget": "EkipaRemontowa:build:production",
+              "proxyConfig": "proxy.conf-prod.json"
             }
           }
         },

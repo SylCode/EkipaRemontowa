@@ -12,7 +12,7 @@ import { ScrollService } from 'src/scroll.service';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
-  public mobileMenu: boolean = false;
+  public mobileMenu: boolean = window.innerWidth <= 1000;
   private screenWidth!: number;
   faBars = faBars;
   private ActiveModules: Array<string> = new Array<string>();
@@ -21,6 +21,7 @@ export class HeaderComponent implements OnInit {
   onResize(event?: Event) {
     this.screenWidth = window.innerWidth;
     this.mobileMenu = this.screenWidth <= 1000;
+    if (this.mobileMenu) console.log('Mobile Menu');
   }
 
   constructor(
@@ -42,6 +43,7 @@ export class HeaderComponent implements OnInit {
   public scroll(el: string) {
     if (!this.scrollService.scrollTo(el)) this.navigateTo('', el);
   }
+  public openMobileMenu(): void {}
 
   public navigateTo(path: string, postScroll: string) {
     if (path == '') {

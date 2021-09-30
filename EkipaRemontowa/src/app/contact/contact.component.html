@@ -1,64 +1,65 @@
-<app-header></app-header>
-<div class="container grid">
-  <div class="circle-reflect"></div>
-  <div class="ground"></div>
-  <br />
-  <br />
-  <br />
-  <div class="contacts glassy-dark lr">
-    <h2>Dane Kontaktowe</h2>
-    <div class="field-container">
-      <div class="field glassy">
-        <h4>Tel.kom:</h4>
-        <p class="number">{{ telephone }}</p>
-      </div>
-      <div class="field glassy">
-        <h4>E-mail:</h4>
-        <p>{{ email }}</p>
+<div class="container" onclick="">
+  <app-header></app-header>
+  <div class="grid">
+    <div class="circle-reflect"></div>
+    <div class="ground"></div>
+    <br />
+    <br />
+    <br />
+    <div class="contacts glassy-dark lr">
+      <h2>Dane Kontaktowe</h2>
+      <div class="field-container">
+        <div class="field glassy">
+          <h4>Tel.kom:</h4>
+          <p class="number">{{ telephone }}</p>
+        </div>
+        <div class="field glassy">
+          <h4>E-mail:</h4>
+          <p>{{ email }}</p>
+        </div>
       </div>
     </div>
+    <div class="fb-container lr glassy-dark">
+      <h4>znajdź nas na</h4>
+      <h3>Facebooku</h3>
+      <fa-icon
+        class="glassy fb btn fa fa-facebook fa-fw"
+        (click)="goToFb()"
+      ></fa-icon>
+    </div>
+    <div class="order glassy-dark">
+      <h2>Zamów kontakt</h2>
+      <form (ng-submit)="callMe()">
+        <input
+          id="email"
+          type="email"
+          class="field glassy"
+          placeholder="Adres e-mail"
+          [formControl]="emailControl"
+        />
+        <textarea
+          id="body"
+          type="text"
+          class="field glassy"
+          placeholder="Wiadomość"
+          [formControl]="bodyControl"
+        ></textarea>
+        <button
+          *ngIf="emailControl.value && bodyControl.value && !emailSent"
+          class="button glassy"
+          type="submit"
+          (click)="callMe()"
+        >
+          Wyślij
+        </button>
+        <div class="success glassy" *ngIf="emailSent">Wysłane</div>
+      </form>
+    </div>
+    <div class="maps">
+      <app-maps></app-maps>
+    </div>
   </div>
-  <div class="fb-container lr glassy-dark">
-    <h4>znajdź nas na</h4>
-    <h3>Facebooku</h3>
-    <fa-icon
-      class="glassy fb btn fa fa-facebook fa-fw"
-      (click)="goToFb()"
-    ></fa-icon>
+  <div class="footer">
+    <app-footer></app-footer>
   </div>
-  <div class="order glassy-dark lr">
-    <h2>Zamów kontakt</h2>
-    <form (ng-submit)="callMe()">
-      <input
-        id="email"
-        type="email"
-        class="field glassy"
-        placeholder="Adres e-mail"
-        [formControl]="emailControl"
-      />
-      <textarea
-        id="body"
-        type="text"
-        class="field glassy"
-        placeholder="Wiadomość"
-        [formControl]="bodyControl"
-      ></textarea>
-      <button
-        *ngIf="emailControl.value && bodyControl.value && !emailSent"
-        class="button glassy"
-        type="submit"
-        (click)="callMe()"
-      >
-        Wyślij
-      </button>
-      <div class="success glassy" *ngIf="emailSent">Wysłane</div>
-    </form>
-  </div>
-  <div class="maps">
-    <app-maps></app-maps>
-  </div>
-  <br />
-  <br />
-  <br />
 </div>
-<app-footer class="bottom"></app-footer>
