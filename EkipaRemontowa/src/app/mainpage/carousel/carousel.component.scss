@@ -12,6 +12,7 @@ img {
   height: 100%;
   display: flex;
   flex-direction: row;
+  border-radius: 0.7em;
   &::-webkit-scrollbar {
     width: 6px;
     height: 10px;

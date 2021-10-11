@@ -1,3 +1,4 @@
+import { SitedataService } from './../../services/sitedata.service';
 import { IoService } from 'src/app/services/io.service';
 import { DataService } from './../../services/data.service';
 
@@ -24,16 +25,20 @@ export class HeaderComponent implements OnInit {
     if (this.mobileMenu) console.log('Mobile Menu');
   }
 
+  public siteName: string;
+
   constructor(
     public scrollService: ScrollService,
     private router: Router,
-    private ioService: IoService
+    private ioService: IoService,
+    private siteDataService: SitedataService
   ) {}
 
   ngOnInit(): void {
     this.ioService.getActiveModules()?.subscribe((res) => {
       this.ActiveModules = res;
     });
+    this.siteName = this.siteDataService.getCompanyName();
   }
 
   public moduleActive(name: string): boolean {
