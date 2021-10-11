@@ -27,7 +27,7 @@ async function senEmail(address, message) {
 
     let info = await transporter.sendMail({
       from: `"Ekipa Remontowa Mailer 🛠️" < mailer@ekipa-remontowa.wroclaw.pl >`,
-      to: 'noccolas@gmail.com',
+      to: 'ekiparemontowa2@gmail.com',
       subject: "[Ekipa Remontowa] Prośba o kontakt",
       html: data,
       attachments: [
