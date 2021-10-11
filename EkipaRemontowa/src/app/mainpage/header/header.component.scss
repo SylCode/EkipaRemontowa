@@ -1,6 +1,6 @@
 .header {
   border-style: none;
-  position: fixed;
+  position: absolute;
   top: 0;
   background: #0000004a;
   z-index: 10;
@@ -63,16 +63,17 @@
 .mobile-menu {
   justify-self: flex-end;
   top: 0px;
-  width: 48px;
   word-wrap: normal;
   white-space: break-spaces;
   font-size: 0.8em;
   right: 0px;
-  z-index: 20;
+  z-index: 10;
   border: none;
   outline: none;
   cursor: pointer;
   visibility: hidden;
+  padding: 0em 0.6em;
+  margin-left: auto;
 
   .icon-container {
     transition: 0.5s;
@@ -152,6 +153,7 @@
   }
   .start {
     margin-left: 0px !important;
+    padding: 0rem 0.6rem !important;
   }
 }
 
@@ -165,7 +167,6 @@
   .mobile-menu {
     visibility: visible;
     margin-top: 0%;
-    padding: 0%;
     font-size: 1.2em !important;
     display: flex;
     flex-direction: column;
@@ -195,7 +196,7 @@
     float: right;
   }
   .header {
-    font-size: 1.2em !important;
+    font-size: 0.8em !important;
   }
 }
 

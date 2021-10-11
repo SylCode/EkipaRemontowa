@@ -1,17 +1,11 @@
-<div id="group2" class="noselect parallax__group">
-  <div class="info parallax__layer parallax__layer--base glassy-dark">
-    <p class="centered">Galeria</p>
+<div id="group2" class="back-img noselect parallax__group">
+  <div class="info">
+    <p class="">Galeria</p>
   </div>
-  <div class="back-img parallax__layer parallax__layer--back"></div>
-  <div class="parallax__layer parallax__layer--fore">
-    <div class="box centered glassy-dark">
-      <div class="slideshow centered">
-        <app-carousel></app-carousel>
-      </div>
+  <div class="box centered glassy-dark">
+    <div class="slideshow centered">
+      <app-carousel></app-carousel>
     </div>
-    <div
-      class="arrow bounce parallax__layer parallax__layer--fore"
-      (click)="scrollTo('app-services')"
-    ></div>
   </div>
+  <div class="arrow bounce" (click)="scrollTo('app-services')"></div>
 </div>

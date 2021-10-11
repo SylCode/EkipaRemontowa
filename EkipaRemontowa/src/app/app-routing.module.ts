@@ -5,6 +5,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { MainpageComponent } from './mainpage/mainpage/mainpage.component';
 import { PricingComponent } from './mainpage/pricing/pricing.component';
 import { DataResolver } from './services/resolvers/data.resolver';
+import { SlideshowComponent } from './mainpage/slideshow/slideshow.component';
+import { ServicesComponent } from './mainpage/services/services.component';
 
 const routes: Routes = [
   { path: '', component: MainpageComponent },
@@ -13,6 +15,8 @@ const routes: Routes = [
     component: PricingComponent,
     resolve: { priceList: DataResolver },
   },
+  { path: 'app-services', component: ServicesComponent },
+  { path: 'app-slideshow', component: SlideshowComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'about-us', component: AboutUsComponent },
   { path: '**', component: MainpageComponent },
