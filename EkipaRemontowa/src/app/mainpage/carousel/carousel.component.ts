@@ -23,38 +23,12 @@ export class CarouselComponent implements OnInit {
     this.ioService.getGalleryList().subscribe((data) => {
       data.forEach((file: string) => {
         this.images.push({
-          img: 'assets/Galery/' + file,
+          img: '../assets/Galery/' + file,
           thumb: 'Image',
         });
       });
 
       this.imagesLoaded = Promise.resolve(true);
-      // var carousel = document.getElementById('carousel');
-      // console.log(carousel);
-      // if (carousel) {
-      //   console.log(carousel);
-
-      //   this.flick = new flickity(carousel, {
-      //     imagesLoaded: true,
-      //     wrapAround: true,
-      //   });
-
-      //   var imgs = carousel.querySelectorAll('img');
-      //   console.log(imgs);
-      //   var docStyle = document.documentElement.style;
-      //   var transformProp =
-      //     typeof docStyle.transform == 'string'
-      //       ? 'transform'
-      //       : 'WebkitTransform';
-
-      //   this.flick.on('scroll', function () {
-      //     this.flick.slides.forEach(function (slide, i) {
-      //       var img = imgs[i];
-      //       var x = ((slide.target + this.flick.x) * -1) / 3;
-      //       img.style[transformProp] = 'translateX(' + x + 'px)';
-      //     });
-      //   });
-      // }
     });
   }
 

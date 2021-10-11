@@ -2,6 +2,9 @@
   width: 100%;
   height: 100%;
   overflow: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background: linear-gradient(to bottom, #2e2e2e, #000000);
   overflow-x: hidden !important;
 
@@ -30,8 +33,7 @@
     }
   }
   .wrapper {
-    // border: 3px yellow solid;
-    padding: 20px;
+    padding: 1.5em;
     width: 80%;
     height: 80%;
     position: relative;
@@ -47,7 +49,7 @@
     .text {
       overflow-y: auto;
       text-justify: inter-ideograph;
-      padding: 0px 40px;
+      padding: 0em 0.8em;
       margin-left: auto;
       margin-right: auto;
       font-size: 1.4rem;
@@ -94,7 +96,7 @@
 
 @media (max-width: 1150px) {
   .text {
-    font-size: 1.2rem !important;
+    font-size: 1.3rem !important;
     max-width: 90% !important;
     margin-top: 20px;
   }
@@ -104,7 +106,7 @@
   .wrapper {
     display: flex;
     flex-direction: column;
-    width: 100% !important;
+    width: 95% !important;
     .text {
       padding: 0px 10px !important;
     }

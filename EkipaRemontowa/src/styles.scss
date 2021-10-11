@@ -257,21 +257,31 @@ img {
   z-index: 3; /* slide over group 7 */
 }
 
-// @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
-//   html,
-//   body {
-//     font-size: 0.7em;
-//   }
-//   h1 {
-//     font-size: 1em;
-//   }
-//   p {
-//     font-size: 1em;
-//   }
-//   li {
-//     font-size: 1.5em;
-//   }
-// }
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+  html,
+  body {
+    font-size: 1.19em !important;
+  }
+
+  h1 {
+    font-size: 1.2em !important;
+  }
+  h2 {
+    font-size: 1.2em !important;
+  }
+  p {
+    font-size: 1.3em;
+    &.company {
+      font-size: 1.2em !important;
+    }
+    &.adv {
+      font-size: 0.85em !important;
+    }
+  }
+  .parallax::-webkit-scrollbar {
+    display: none;
+  }
+}
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
   html,
   body {
@@ -289,79 +299,6 @@ img {
   .parallax::-webkit-scrollbar {
     display: none;
   }
-
-  // .parallax {
-  //   overflow-x: hidden;
-  //   overflow-y: auto;
-  //   -webkit-perspective: 0px;
-  //   perspective: 0px;
-  //   -webkit-perspective-origin-x: 100%;
-  //   perspective-origin-x: 100%;
-  //   &::-webkit-scrollbar {
-  //     display: none;
-  //   }
-  // }
-  // .parallax__group {
-  //   position: relative;
-  //   -webkit-transform-style: none;
-  //   transform-style: none;
-  // }
-
-  // .parallax__layer {
-  //   position: relative;
-  //   overflow: hidden;
-  //   -webkit-transform-origin-x: none;
-  //   transform-origin-x: none;
-  // }
-
-  // .parallax__layer--fore {
-  //   -webkit-transform: none;
-  //   transform: none;
-  // }
-
-  // .parallax__layer--base {
-  //   -webkit-transform: none;
-  //   transform: none;
-  // }
-
-  // .parallax__layer--back {
-  //   -webkit-transform: none;
-  //   transform: none;
-  // }
-
-  // .parallax__layer--deep {
-  //   -webkit-transform: none;
-  //   transform: none;
-  // }
-  // #group1 {
-  //   z-index: 1;
-  // }
-
-  // #group2 {
-  //   z-index: 1;
-  // }
-
-  // #group3 {
-  //   z-index: 1;
-  // }
-  // #group4 {
-  //   z-index: 1;
-  // }
-
-  // #group5 {
-  //   z-index: 1;
-  // }
-
-  // #group6 {
-  //   z-index: 1;
-  // }
-  // #group7 {
-  //   z-index: 1;
-  // }
-  // .back-img {
-  //   width: 100%;
-  //   height: 100%;
-  // }
 }
 @media only screen and (min-device-width: 280px) and (max-device-width: 320px) and (-webkit-min-device-pixel-ratio: 2) {
   html,
@@ -371,77 +308,4 @@ img {
   .parallax::-webkit-scrollbar {
     display: none;
   }
-  // .parallax {
-  //   overflow-x: hidden;
-  //   overflow-y: auto;
-  //   -webkit-perspective: 0px;
-  //   perspective: 0px;
-  //   -webkit-perspective-origin-x: 100%;
-  //   perspective-origin-x: 100%;
-  //   &::-webkit-scrollbar {
-  //     display: none;
-  //   }
-  // }
-  // .parallax__group {
-  //   position: relative;
-  //   -webkit-transform-style: none;
-  //   transform-style: none;
-  // }
-
-  // .parallax__layer {
-  //   position: relative;
-  //   overflow: hidden;
-  //   -webkit-transform-origin-x: none;
-  //   transform-origin-x: none;
-  // }
-
-  // .parallax__layer--fore {
-  //   -webkit-transform: none;
-  //   transform: none;
-  // }
-
-  // .parallax__layer--base {
-  //   -webkit-transform: none;
-  //   transform: none;
-  // }
-
-  // .parallax__layer--back {
-  //   -webkit-transform: none;
-  //   transform: none;
-  // }
-
-  // .parallax__layer--deep {
-  //   -webkit-transform: none;
-  //   transform: none;
-  // }
-  // #group1 {
-  //   z-index: 1;
-  // }
-
-  // #group2 {
-  //   z-index: 1;
-  // }
-
-  // #group3 {
-  //   z-index: 1;
-  // }
-  // #group4 {
-  //   z-index: 1;
-  // }
-
-  // #group5 {
-  //   z-index: 1;
-  // }
-
-  // #group6 {
-  //   z-index: 1;
-  // }
-  // #group7 {
-  //   z-index: 1;
-  // }
-
-  // .back-img {
-  //   width: 100%;
-  //   height: 100%;
-  // }
 }

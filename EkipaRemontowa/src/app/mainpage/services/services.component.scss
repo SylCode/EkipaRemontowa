@@ -195,31 +195,29 @@ $prim: #006079;
     list-style: none;
     margin-left: auto;
     margin-right: auto;
-    counter-reset: steps;
     text-align: left;
-    font-size: 1.5em;
+    font-size: 1.8em;
     padding: 1rem 0rem;
     width: 95%;
     height: 96%;
+    //list-style-image: url(../../../assets/bullet.png);
   }
   ol li {
-    counter-increment: steps;
     color: white;
   }
   ol li::before {
-    content: counter(steps);
-    margin-right: 0.5rem;
-    background: #00e1ff;
-    color: white;
-    width: 1.2em;
-    height: 1.2em;
-    border-radius: 50%;
-    display: inline-grid;
+    font-family: FontAwesome;
+    font-size: 1.4em;
+    content: "\f105";
+    position: absolute;
+    left: 1.1em;
     place-items: center;
-    line-height: 1.2em;
-  }
-  ol ol li::before {
-    background: darkorchid;
+    color: rgb(255, 123, 0);
+
+    text-shadow: -1px -1px 0 rgba(255, 231, 215, 0.795),
+      1px -1px 0 rgba(255, 231, 215, 0.795),
+      -1px 1px 0 rgba(255, 231, 215, 0.795),
+      1px 1px 0 rgba(255, 231, 215, 0.795);
   }
 }
 
@@ -227,4 +225,16 @@ $prim: #006079;
   position: absolute;
   bottom: 0;
   width: 100%;
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+  ol li::before {
+    left: 0.4em !important;
+  }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+  ol li::before {
+    left: 0.2em !important;
+  }
 }
