@@ -219,10 +219,17 @@ textarea {
 .maps {
   grid-row: 3;
   grid-column: 3;
+  align-items: center;
+  justify-items: center;
   max-width: 100%;
   min-width: 255px;
   width: 80%;
-  height: 90%;
+}
+app-footer {
+  grid-row: 4;
+  grid-column: span 4;
+  width: 100%;
+  align-self: end;
 }
 
 @media only screen and (max-width: 1150px) {

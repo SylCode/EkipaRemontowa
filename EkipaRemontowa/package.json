@@ -38,7 +38,6 @@
     "@fortawesome/free-solid-svg-icons": "^5.15.3",
     "@types/jquery": "^3.5.5",
     "axios": "^0.21.1",
-    "bootstrap": "^5.1.0",
     "flickity": "^2.2.2",
     "jquery": "^3.6.0",
     "rxjs": "~6.6.0",

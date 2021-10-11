@@ -1,7 +1,10 @@
 .header {
   border-style: none;
-  background: rgb(56 56 56);
+  position: fixed;
+  top: 0;
+  background: #0000004a;
   z-index: 10;
+  width: 100%;
   border-bottom: 1px white solid;
   text-transform: uppercase;
   h1 {

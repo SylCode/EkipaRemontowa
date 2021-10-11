@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-const GalleryFolder = '../../../public_html/ekipa-remontowa.wroclaw.pl/Galery';
+const GalleryFolder = '../../public_html/Galery';
 const fs = require('fs');
 let files = [];
 var path = require('path');

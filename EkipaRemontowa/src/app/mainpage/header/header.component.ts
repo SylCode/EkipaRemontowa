@@ -41,6 +41,7 @@ export class HeaderComponent implements OnInit {
   }
 
   public scroll(el: string) {
+    document.getElementById('header').focus();
     if (!this.scrollService.scrollTo(el)) this.navigateTo('', el);
   }
   public openMobileMenu(): void {}
