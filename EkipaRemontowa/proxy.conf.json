@@ -2,5 +2,11 @@
     "/api/*": {
       "target": "http://localhost:3000",
       "logLevel": "debug"
+    },
+    "*": {
+      "target": "https://www.google.com",
+      "secure": true,
+      "logLevel": "debug",
+      "changeOrigin": true
     }
   }

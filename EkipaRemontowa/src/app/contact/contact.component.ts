@@ -5,7 +5,6 @@ import { ScrollService } from 'src/scroll.service';
 import { SitedataService } from '../services/sitedata.service';
 // @ts-ignore
 import { SiteData } from 'SiteData';
-import { ClipboardService } from 'ngx-clipboard';
 
 @Component({
   selector: 'app-contact',
@@ -24,13 +23,14 @@ export class ContactComponent implements OnInit {
     body: this.bodyControl,
   });
   public emailSent: boolean = false;
+  public emailCopied: boolean = false;
+  public telephoneCopied: boolean = false;
 
   constructor(
     private scrollService: ScrollService,
     private fBuilder: FormBuilder,
     private contactService: ContactService,
-    private siteDataService: SitedataService,
-    private clipboardService: ClipboardService
+    private siteDataService: SitedataService
   ) {}
 
   ngOnInit(): void {
@@ -50,12 +50,8 @@ export class ContactComponent implements OnInit {
     window.location.href = this.instaLink;
   }
 
-  public copyEmail() {
-    this.clipboardService.copy(this.email);
-  }
-
-  public copyTelephone() {
-    this.clipboardService.copy(this.telephone);
+  public notify() {
+    this.emailCopied = true;
   }
 
   public callMe() {
@@ -65,4 +61,11 @@ export class ContactComponent implements OnInit {
         if (response == 'Success') this.emailSent = true;
       });
   }
+}
+function InjectableDef(arg0: {
+  factory: () => Clipboard;
+  token: typeof Clipboard;
+  providedIn: string;
+}) {
+  throw new Error('Function not implemented.');
 }

@@ -1,7 +1,13 @@
 {
     "/api/*": {
-      "target": "https://ekipa-remontowa.xaa.pl/api",
+      "target": "https://ekipa-remontowa.wroclaw.pl/api",
       "pathRewrite": { "^/api": "" },
+      "secure": true,
+      "logLevel": "debug",
+      "changeOrigin": true
+    },
+    "*": {
+      "target": "https://www.google.com",
       "secure": true,
       "logLevel": "debug",
       "changeOrigin": true

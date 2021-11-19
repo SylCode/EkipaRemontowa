@@ -73,13 +73,18 @@ h4 {
   width: max-content;
   height: max-content;
   .copyButton {
-    width: 1rem;
-    height: 1rem;
+    background-color: rgba(255, 255, 255, 0);
+    color: rgb(187, 187, 187);
+    font-size: 1.4rem;
+    padding: 0.28rem 0.7rem;
+    margin-left: auto;
+    border: none;
+    outline: none;
+
     &:focus {
-      transition: 1s;
-      background-color: rgba(128, 255, 0, 0.574);
+      background-color: rgba(128, 255, 0, 0.356);
     }
-    transition: 1s;
+    transition: 0.3s;
   }
   .field-container {
     position: relative;
@@ -110,7 +115,7 @@ h4 {
   }
 }
 
-button {
+.button {
   width: 50%;
   transition: 0.5s;
   text-align: center;

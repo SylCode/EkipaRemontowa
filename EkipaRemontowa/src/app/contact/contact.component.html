@@ -13,16 +13,16 @@
           <h4>Tel.kom:</h4>
           <p class="number">{{ telephone }}</p>
           <button
-            class="glassy copyButton fas fa-copy"
-            (click)="(copyTelephone)"
+            [copy-clipboard]="telephone"
+            class="copyButton far fa-copy"
           ></button>
         </div>
         <div class="field glassy">
           <h4>E-mail:</h4>
           <p>{{ email }}</p>
           <button
-            class="glassy copyButton fas fa-copy"
-            (click)="(copyEmail)"
+            [copy-clipboard]="email"
+            class="copyButton far fa-copy"
           ></button>
         </div>
       </div>
