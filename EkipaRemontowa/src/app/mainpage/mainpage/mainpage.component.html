@@ -1,14 +1,32 @@
-<div class="parallax" #wrapper onclick="">
+<ng-container *ngIf="mobileMenu; else elseTemplate">
+  <div class="parallax" #wrapper onclick="">
+    <app-header></app-header>
+    <app-content class="content" appScrollable></app-content>
+    <div [hidden]="!moduleActive('Galeria')">
+      <app-slideshow onclick="" class="content" appScrollable></app-slideshow>
+    </div>
+    <div [hidden]="!moduleActive('Realizacje')">
+      <app-realizacje class="content" appScrollable></app-realizacje>
+    </div>
+    <div [hidden]="!moduleActive('Uslugi')">
+      <app-services class="content" appScrollable></app-services>
+    </div>
+    <app-footer></app-footer>
+  </div>
+</ng-container>
+<ng-template #elseTemplate>
   <app-header></app-header>
-  <app-content class="content" appScrollable></app-content>
-  <div [hidden]="!moduleActive('Galeria')">
-    <app-slideshow onclick="" class="content" appScrollable></app-slideshow>
-  </div>
-  <div [hidden]="!moduleActive('Realizacje')">
-    <app-realizacje class="content" appScrollable></app-realizacje>
-  </div>
-  <div [hidden]="!moduleActive('Uslugi')">
-    <app-services class="content" appScrollable></app-services>
+  <div class="parallax" #wrapper onclick="">
+    <app-content class="content" appScrollable></app-content>
+    <div [hidden]="!moduleActive('Galeria')">
+      <app-slideshow onclick="" class="content" appScrollable></app-slideshow>
+    </div>
+    <div [hidden]="!moduleActive('Realizacje')">
+      <app-realizacje class="content" appScrollable></app-realizacje>
+    </div>
+    <div [hidden]="!moduleActive('Uslugi')">
+      <app-services class="content" appScrollable></app-services>
+    </div>
   </div>
   <app-footer></app-footer>
-</div>
+</ng-template>

@@ -1,6 +1,8 @@
 import { SitedataService } from './services/sitedata.service';
 import { Component } from '@angular/core';
 import { Title } from '@angular/platform-browser';
+// @ts-ignore
+import { SiteDataRoot } from 'SiteData';
 
 @Component({
   selector: 'app-root',
@@ -10,8 +12,10 @@ import { Title } from '@angular/platform-browser';
 export class AppComponent {
   constructor(
     private titleService: Title,
-    private siteDateService: SitedataService
+    private siteDataService: SitedataService
   ) {
-    this.titleService.setTitle(this.siteDateService.getCompanyTitle());
+    this.siteDataService.SiteData.subscribe((res: SiteDataRoot) => {
+      this.titleService.setTitle(res.Titles.title);
+    });
   }
 }

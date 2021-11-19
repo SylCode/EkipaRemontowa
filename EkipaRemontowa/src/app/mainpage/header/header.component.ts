@@ -1,11 +1,11 @@
 import { SitedataService } from './../../services/sitedata.service';
-import { IoService } from 'src/app/services/io.service';
-import { DataService } from './../../services/data.service';
 
-import { Component, OnInit, HostListener } from '@angular/core';
+import { Component, OnInit, HostListener, Input } from '@angular/core';
 import { Router } from '@angular/router';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { ScrollService } from 'src/scroll.service';
+// @ts-ignore
+import { SiteData } from 'SiteData';
 
 @Component({
   selector: 'app-header',
@@ -17,6 +17,7 @@ export class HeaderComponent implements OnInit {
   private screenWidth!: number;
   faBars = faBars;
   private ActiveModules: Array<string> = new Array<string>();
+  private siteData: SiteData;
 
   @HostListener('window:resize', ['$event'])
   onResize(event?: Event) {
@@ -30,15 +31,19 @@ export class HeaderComponent implements OnInit {
   constructor(
     public scrollService: ScrollService,
     private router: Router,
-    private ioService: IoService,
     private siteDataService: SitedataService
   ) {}
 
   ngOnInit(): void {
-    this.ioService.getActiveModules()?.subscribe((res) => {
-      this.ActiveModules = res;
-    });
-    this.siteName = this.siteDataService.getCompanyName();
+    if (this.siteData == undefined) {
+      this.siteDataService.SiteData.subscribe((res: SiteData) => {
+        this.siteName = res.Titles.companyName;
+        this.ActiveModules = res.ActiveModules.Modules;
+      });
+    } else {
+      this.siteName = this.siteData.Titles.companyName;
+      this.ActiveModules = this.siteData.ActiveModules.Modules;
+    }
   }
 
   public moduleActive(name: string): boolean {

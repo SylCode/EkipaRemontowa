@@ -1,9 +1,13 @@
+import { SitedataService } from './../../services/sitedata.service';
+// @ts-ignore
+import { SiteData } from 'SiteData';
 import { ActivatedRoute } from '@angular/router';
 import {
   AfterViewChecked,
   AfterViewInit,
   Component,
   ElementRef,
+  HostListener,
   OnDestroy,
   OnInit,
   QueryList,
@@ -24,6 +28,9 @@ import { HeaderComponent } from '../header/header.component';
 export class MainpageComponent
   implements OnInit, AfterViewInit, AfterViewChecked, OnDestroy
 {
+  public mobileMenu: boolean = window.innerWidth <= 1000;
+  private screenWidth!: number;
+
   @ViewChildren(ScrollableDirective)
   set ele1(v: QueryList<ScrollableDirective>) {
     this.scrollableComponentList = v;
@@ -37,29 +44,36 @@ export class MainpageComponent
     this.basicScrollElRef = v;
   }
 
+  @HostListener('window:resize', ['$event'])
+  onResize(event?: Event) {
+    this.screenWidth = window.innerWidth;
+    this.mobileMenu = this.screenWidth <= 1000;
+  }
+
   scrollableComponentList!: QueryList<ScrollableDirective>;
   header!: HeaderComponent;
   basicScrollElRef!: ElementRef;
   sub: Subscription = new Subscription();
 
   private ActiveModules: Array<string> = new Array<string>();
+  public siteData: SiteData;
 
   constructor(
     private scrollService: ScrollService,
-    private ioService: IoService,
-    private activatedRoute: ActivatedRoute
+    private activatedRoute: ActivatedRoute,
+    private siteDataService: SitedataService
   ) {}
 
-  ngAfterViewChecked(): void {
-    //console.log('View Rendered');
-  }
+  ngAfterViewChecked(): void {}
 
   ngOnInit(): void {
-    this.ioService.getActiveModules()?.subscribe((res) => {
-      this.ActiveModules = res;
-    });
-    this.activatedRoute.queryParams.subscribe((params) => {
-      this.scrollService.pendingScroll = params['postScroll'];
+    this.activatedRoute.data.subscribe((data: any) => {
+      this.siteData = data.siteData;
+      this.siteDataService.siteData = this.siteData;
+      this.ActiveModules = this.siteData.ActiveModules.Modules;
+      this.activatedRoute.queryParams.subscribe((params) => {
+        this.scrollService.pendingScroll = params['postScroll'];
+      });
     });
   }
 
@@ -72,7 +86,7 @@ export class MainpageComponent
   }
 
   public moduleActive(name: string): boolean {
-    return this.ActiveModules.indexOf(name) > -1;
+    return this.siteData.ActiveModules.Modules.indexOf(name) > -1;
   }
 
   ngOnDestroy() {}

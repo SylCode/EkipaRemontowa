@@ -2,10 +2,10 @@ import { ContactService } from './../services/contact.service';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { ScrollService } from 'src/scroll.service';
-import {
-  faFacebook,
-  faFacebookSquare,
-} from '@fortawesome/free-brands-svg-icons';
+import { SitedataService } from '../services/sitedata.service';
+// @ts-ignore
+import { SiteData } from 'SiteData';
+import { ClipboardService } from 'ngx-clipboard';
 
 @Component({
   selector: 'app-contact',
@@ -13,9 +13,10 @@ import {
   styleUrls: ['./contact.component.scss'],
 })
 export class ContactComponent implements OnInit {
-  public telephone = '+48 518 730 157';
-  public email = 'ekiparemontowa2@gmail.com';
-  public fbLink = 'https://www.facebook.com/profile.php?id=100054263510773';
+  public telephone = '';
+  public email = '';
+  public fbLink = '';
+  public instaLink = '';
   public emailControl = new FormControl();
   public bodyControl = new FormControl();
   public callMeForm = new FormGroup({
@@ -27,15 +28,34 @@ export class ContactComponent implements OnInit {
   constructor(
     private scrollService: ScrollService,
     private fBuilder: FormBuilder,
-    private contactService: ContactService
+    private contactService: ContactService,
+    private siteDataService: SitedataService,
+    private clipboardService: ClipboardService
   ) {}
 
   ngOnInit(): void {
     this.scrollService.diableScroll();
+    this.siteDataService.SiteData.subscribe((res: SiteData) => {
+      this.telephone = res.contacts.telephone;
+      this.email = res.contacts.email;
+      this.fbLink = res.contacts.fbLink;
+      this.instaLink = res.contacts.instaLink;
+    });
   }
 
   public goToFb() {
     window.location.href = this.fbLink;
+  }
+  public goToInsta() {
+    window.location.href = this.instaLink;
+  }
+
+  public copyEmail() {
+    this.clipboardService.copy(this.email);
+  }
+
+  public copyTelephone() {
+    this.clipboardService.copy(this.telephone);
   }
 
   public callMe() {

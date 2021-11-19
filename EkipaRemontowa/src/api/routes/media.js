@@ -4,6 +4,7 @@ const GalleryFolder = '../../public_html/assets/Galery';
 const fs = require('fs');
 let files = [];
 var path = require('path');
+const { stringify } = require('querystring');
 
 
 
@@ -42,6 +43,27 @@ router.get('/activemodules', function (req, res) {
 router.get('/services', function (req, res) {
   data = fs.readFileSync('./resources/uslugi.json', { encoding: 'utf8', flag: 'r' });
   res.send(data);
+})
+
+router.get('/sitedata', function (req, res) {
+  data = fs.readFileSync('./resources/siteData.json', { encoding: 'utf8', flag: 'r' });
+  res.send(data);
+})
+
+router.post('/update', function (req, res) {
+  fs.writeFile('./resources/siteData.json', JSON.stringify(req.body, null, '\t'), {
+    encoding: "utf8",
+    flag: "w",
+    mode: 0o666
+  },
+    (err) => {
+      if (err)
+        console.log(err);
+      else {
+        console.log("File written successfully\n");
+        res.sendStatus(200);
+      }
+    });
 })
 
 module.exports = router;

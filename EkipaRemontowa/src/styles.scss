@@ -167,7 +167,7 @@ img {
   height: 500px; /* fallback for older browsers */
   height: 100vh;
   overflow-x: hidden;
-  overflow-y: auto;
+  //overflow-y: auto;
   -webkit-perspective: 300px;
   perspective: 300px;
   -webkit-perspective-origin-x: 100%;
@@ -196,8 +196,8 @@ img {
 }
 
 .parallax__layer--fore {
-  -webkit-transform: translateZ(90px) scale(0.7);
-  transform: translateZ(90px) scale(0.7);
+  -webkit-transform: translateZ(90px) scale(1);
+  transform: translateZ(90px) scale(1);
   z-index: 1;
 }
 

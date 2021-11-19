@@ -1,5 +1,8 @@
+import { SitedataService } from './../../services/sitedata.service';
 import { IoService } from 'src/app/services/io.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+// @ts-ignore
+import { SiteData } from 'SiteData';
 
 @Component({
   selector: 'app-services',
@@ -8,11 +11,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ServicesComponent implements OnInit {
   public items: string[] = [];
-  constructor(private ioService: IoService) {
-    this.ioService.getServices().subscribe((data) => {
-      this.items = data;
+  constructor(private siteDataService: SitedataService) {}
+
+  ngOnInit(): void {
+    this.siteDataService.SiteData.subscribe((res: SiteData) => {
+      this.items = res.uslugi;
     });
   }
-
-  ngOnInit(): void {}
 }

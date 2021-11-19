@@ -1,22 +1,33 @@
+import { catchError } from 'rxjs/operators';
 import { HttpClient } from '@angular/common/http';
-import { StringMap } from '@angular/compiler/src/compiler_facade_interface';
-import { Injectable } from '@angular/core';
+import { Injectable, OnInit } from '@angular/core';
+import { of, Observable, empty, Observer } from 'rxjs';
+// @ts-ignore
+import { SiteData } from 'SiteData';
 
 @Injectable({
   providedIn: 'root',
 })
 export class SitedataService {
-  constructor() {}
+  constructor(private HttpClient: HttpClient) {}
 
-  private title =
-    'Wrocław - Realizacje dla firm, Wykończenia wnętrz, Malowanie, Remonty';
-  private companyName = 'EKIPA REMONTOWA';
+  // public init() {
+  //   if (this.siteData === undefined)
+  //     this.HttpClient.get<SiteDataRoot>('/api/media/sitedata')
+  //       .pipe(catchError((_: any) => of('Failed to get SiteData')))
+  //       .subscribe((res: any) => {
+  //         this.siteData = res;
+  //         console.log(this.siteData);
+  //       });
+  // }
 
-  public getCompanyName(): string {
-    return this.companyName;
-  }
+  public siteData: SiteData;
 
-  public getCompanyTitle(): string {
-    return `${this.companyName} ${this.title}`;
+  public get SiteData(): Observable<SiteData> {
+    if (this.siteData !== undefined) return of(this.siteData);
+    console.log('Requesting site data');
+    return this.HttpClient.get<SiteData>(
+      '/api/media/sitedata'
+    ) as Observable<SiteData>;
   }
 }

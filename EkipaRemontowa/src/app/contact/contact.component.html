@@ -12,20 +12,38 @@
         <div class="field glassy">
           <h4>Tel.kom:</h4>
           <p class="number">{{ telephone }}</p>
+          <button
+            class="glassy copyButton fas fa-copy"
+            (click)="(copyTelephone)"
+          ></button>
         </div>
         <div class="field glassy">
           <h4>E-mail:</h4>
           <p>{{ email }}</p>
+          <button
+            class="glassy copyButton fas fa-copy"
+            (click)="(copyEmail)"
+          ></button>
         </div>
       </div>
     </div>
-    <div class="fb-container lr glassy-dark">
-      <h4>znajdź nas na</h4>
-      <h3>Facebooku</h3>
-      <fa-icon
-        class="glassy fb btn fa fa-facebook fa-fw"
-        (click)="goToFb()"
-      ></fa-icon>
+    <div class="media-section">
+      <div class="media-container lr glassy-dark">
+        <h4>znajdź nas na</h4>
+        <h3>Facebooku</h3>
+        <fa-icon
+          class="glassy fb btn fa fa-facebook"
+          (click)="goToFb()"
+        ></fa-icon>
+      </div>
+      <div class="media-container lr glassy-dark">
+        <h4>obejrzyj nasz</h4>
+        <h3>Insta</h3>
+        <fa-icon
+          class="glassy inst btn fab fa-instagram"
+          (click)="goToInsta()"
+        ></fa-icon>
+      </div>
     </div>
     <div class="order glassy-dark">
       <h2>Zamów kontakt</h2>

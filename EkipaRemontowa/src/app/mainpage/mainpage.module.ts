@@ -17,6 +17,7 @@ import { PricingSidebarComponent } from './pricing/pricing-sidebar/pricing-sideb
 import { FieldsModule } from './pricing/fields/fields.module';
 import { ServicesComponent } from './services/services.component';
 import { AppRoutingModule } from '../app-routing.module';
+import { ClipboardModule } from 'ngx-clipboard';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import { AppRoutingModule } from '../app-routing.module';
     SharedModule,
     FieldsModule,
     FontAwesomeModule,
+    ClipboardModule,
   ],
   exports: [HeaderComponent],
 })
