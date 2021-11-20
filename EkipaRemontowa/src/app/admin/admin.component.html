@@ -1,4 +1,160 @@
-<h1 class="title"></h1>
-<div class="box centered">
-  <input type="text" placeholder="{{ data }}" />
+<div class="wrapper">
+  <app-header></app-header>
+  <div class="container">
+    <ng-container *ngIf="!loggedIn; else pageTemplate">
+      <div class="formWrapper glassy-dark">
+        <h2>Logowanie do panelu administratora</h2>
+        <form class="field-container" (ng-submit)="authorise()">
+          <input
+            id="login"
+            type="text"
+            class="field glassy"
+            placeholder="login"
+            [formControl]="loginControl"
+          />
+          <input
+            id="pass"
+            type="password"
+            class="field glassy"
+            placeholder="hasło"
+            [formControl]="passControl"
+          />
+          <button
+            *ngIf="loginControl.value && passControl.value"
+            class="button glassy"
+            type="submit"
+            (click)="authorise()"
+          >
+            Zaloguj się
+          </button>
+          <div class="success glassy" *ngIf="loggedIn">Zalogowano</div>
+        </form>
+      </div>
+    </ng-container>
+    <ng-template #pageTemplate>
+      <div class="updateFormWrapper glassy-dark">
+        <h1>Panel administratora</h1>
+        <form class="updateForm" (ng-submit)="authorise()">
+          <div class="field-group shrink-0 glassy">
+            <h2>Dane strony</h2>
+            <div class="fieldWrapper">
+              <p>Nazwa firmy</p>
+              <input
+                type="text"
+                class="field glassy"
+                [formControl]="companyNameControl"
+                [(ngModel)]="siteData.Titles.companyName"
+              />
+            </div>
+            <div class="fieldWrapper">
+              <p>Tytuł strony</p>
+              <textarea
+                type="text"
+                class="field glassy"
+                [formControl]="siteTitleControl"
+                [(ngModel)]="siteData.Titles.title"
+              ></textarea>
+            </div>
+          </div>
+          <div class="field-group shrink-0 glassy">
+            <h2>Dane kontaktowe</h2>
+            <div class="fieldWrapper">
+              <p>Telefon</p>
+              <input
+                type="text"
+                class="field glassy"
+                [formControl]="telephoneControl"
+                [(ngModel)]="siteData.contacts.telephone"
+              />
+            </div>
+            <div class="fieldWrapper">
+              <p>Email</p>
+              <input
+                type="text"
+                class="field glassy"
+                [formControl]="emailControl"
+                [(ngModel)]="siteData.contacts.email"
+              />
+            </div>
+            <div class="fieldWrapper">
+              <p>Facebook</p>
+              <input
+                type="text"
+                class="field glassy"
+                [formControl]="fbLinkControl"
+                [(ngModel)]="siteData.contacts.fbLink"
+              />
+            </div>
+            <div class="fieldWrapper">
+              <p>Instagram</p>
+              <input
+                type="text"
+                class="field glassy"
+                [formControl]="instaLinkControl"
+                [(ngModel)]="siteData.contacts.instaLink"
+              />
+            </div>
+          </div>
+          <div class="field-group glassy">
+            <h2>Szczegóły</h2>
+
+            <div class="fieldWrapper">
+              <P>Termin rezerwacji</P>
+              <input
+                type="text"
+                class="field glassy"
+                [formControl]="reservationControl"
+                [(ngModel)]="siteData.rezerwacja"
+              />
+            </div>
+            <div class="fieldWrapper">
+              <p>Aktywne moduły strony</p>
+              <p>{{ siteData.ActiveModules.Hint }}</p>
+              <input
+                type="text"
+                class="field glassy"
+                [formControl]="activeModulesControl"
+                [(ngModel)]="siteData.ActiveModules.Modules"
+              />
+            </div>
+            <div class="fieldWrapper">
+              <p>Lista usług</p>
+              <textarea
+                type="text"
+                class="field glassy"
+                [formControl]="servicesControl"
+                [(ngModel)]="siteData.uslugi"
+              ></textarea>
+            </div>
+          </div>
+          <div class="field-group shrink-0 glassy">
+            <h2>Dodatkowe informacje</h2>
+            <div class="fieldWrapper">
+              <P>O nas</P>
+              <textarea
+                type="text"
+                class="field glassy"
+                [formControl]="aboutControl"
+                [(ngModel)]="siteData.about"
+              ></textarea>
+            </div>
+            <div class="fieldWrapper">
+              <p>Realizacje</p>
+              <textarea
+                type="text"
+                class="field glassy"
+                [formControl]="realisationsControl"
+                [(ngModel)]="siteData.realizacje"
+              ></textarea>
+            </div>
+          </div>
+        </form>
+        <button class="button glassy" type="submit" (click)="updateSiteData()">
+          Zapisz zmiany
+        </button>
+        <div class="success glassy" *ngIf="saved">Zapisano</div>
+      </div>
+    </ng-template>
+  </div>
+  <app-footer></app-footer>
 </div>

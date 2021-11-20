@@ -7,8 +7,11 @@ body {
   //letter-spacing: 1px;
   font-size: 0.9em;
   color: rgb(255, 255, 255);
-  background: rgb(34, 34, 34);
-  background-image: url(assets/x-11a-corunna-ave-16-copy.jpg);
+  background: rgb(31, 31, 31);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
   margin: 0;
   height: 100%;
   width: 100%;
@@ -95,7 +98,7 @@ body {
   background: rgba(255, 255, 255, 0.05);
   border: none;
   outline: none;
-  padding: 0px 20px;
+  padding: 0rem 1.2rem;
   border-radius: 5px;
   backdrop-filter: blur(5px);
   border: 1px solid rgba(255, 255, 255, 0.5);
@@ -108,7 +111,7 @@ body {
   backdrop-filter: blur(5px);
   border: none;
   outline: none;
-  padding: 0px 20px;
+  padding: 0rem 1.2rem;
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.5);
   border-right: 1px solid rgba(255, 255, 255, 0.2);
@@ -282,6 +285,12 @@ img {
   .parallax::-webkit-scrollbar {
     display: none;
   }
+  .parallax__group {
+    position: relative;
+    height: 95vh;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+  }
 }
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
   html,
@@ -300,6 +309,12 @@ img {
   .parallax::-webkit-scrollbar {
     display: none;
   }
+  .parallax__group {
+    position: relative;
+    height: 95vh;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+  }
 }
 @media only screen and (min-device-width: 280px) and (max-device-width: 320px) and (-webkit-min-device-pixel-ratio: 2) {
   html,
@@ -308,5 +323,11 @@ img {
   }
   .parallax::-webkit-scrollbar {
     display: none;
+  }
+  .parallax__group {
+    position: relative;
+    height: 95vh;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
   }
 }

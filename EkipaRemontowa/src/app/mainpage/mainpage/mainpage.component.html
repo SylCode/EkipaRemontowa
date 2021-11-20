@@ -1,5 +1,5 @@
 <ng-container *ngIf="mobileMenu; else elseTemplate">
-  <div class="parallax" #wrapper onclick="">
+  <div class="parallax background-black" #wrapper onclick="">
     <app-header></app-header>
     <app-content class="content" appScrollable></app-content>
     <div [hidden]="!moduleActive('Galeria')">
@@ -27,6 +27,6 @@
     <div [hidden]="!moduleActive('Uslugi')">
       <app-services class="content" appScrollable></app-services>
     </div>
+    <app-footer></app-footer>
   </div>
-  <app-footer></app-footer>
 </ng-template>

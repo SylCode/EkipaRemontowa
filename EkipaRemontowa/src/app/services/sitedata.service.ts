@@ -30,4 +30,8 @@ export class SitedataService {
       '/api/media/sitedata'
     ) as Observable<SiteData>;
   }
+
+  public updateSiteData(data: SiteData): Observable<any> {
+    return this.HttpClient.post('api/media/update', data) as Observable<any>;
+  }
 }

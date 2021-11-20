@@ -17,34 +17,6 @@ router.get('/', function (req, res, next) {
   files = [];
 });
 
-router.get('/about', function (req, res, next) {
-  const data = fs.readFileSync('./resources/about.txt',
-    { encoding: 'utf8', flag: 'r' });
-  res.json(data);
-});
-
-router.get('/reservation', function (req, res, next) {
-  const rezdata = fs.readFileSync('./resources/rezerwacja.txt',
-    { encoding: 'utf8', flag: 'r' });
-  res.json(rezdata);
-});
-
-router.get('/realisations', function (req, res, next) {
-  const data = fs.readFileSync('./resources/realizacje.json',
-    { encoding: 'utf8', flag: 'r' });//.replace(/\r?\n|\r/g,'');
-  res.send(data);
-});
-
-router.get('/activemodules', function (req, res) {
-  data = fs.readFileSync('./resources/activeModules.json', { encoding: 'utf8', flag: 'r' });
-  res.send(data);
-})
-
-router.get('/services', function (req, res) {
-  data = fs.readFileSync('./resources/uslugi.json', { encoding: 'utf8', flag: 'r' });
-  res.send(data);
-})
-
 router.get('/sitedata', function (req, res) {
   data = fs.readFileSync('./resources/siteData.json', { encoding: 'utf8', flag: 'r' });
   res.send(data);
@@ -61,7 +33,7 @@ router.post('/update', function (req, res) {
         console.log(err);
       else {
         console.log("File written successfully\n");
-        res.sendStatus(200);
+        res.send({ "Status": "Success" });
       }
     });
 })

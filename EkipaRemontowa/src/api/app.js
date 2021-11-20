@@ -8,6 +8,7 @@ const port = 3000;
 var media = require('./routes/media');
 var pricer = require('./routes/pricer');
 var contact = require('./routes/contact');
+var auth = require('./routes/auth');
 
 var app = express();
 app.use(bodyParser.urlencoded({
@@ -21,11 +22,12 @@ app.use('/api/media/reservation', media);
 app.use('/api/media/realisations', media);
 app.use('/api/pricer', pricer);
 app.use('/api/contact', contact);
+app.use('/api/auth', auth);
 app.get('/api', (req, res) => {
-  res.send(`API is running on port ${port}`);
+  res.send(`API is live`);
 });
 app.get('/', (req, res) => {
-  res.send(`API is running on port ${port}`);
+  res.send(`API is live`);
 });
 
 app.listen(port, () => {
