@@ -46,8 +46,8 @@
 }
 
 .lr {
-  margin-left: 15px;
-  margin-right: 15px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 h2,
@@ -199,6 +199,7 @@ textarea {
   justify-content: center;
   align-items: center;
   flex-direction: row;
+  margin-bottom: 10px;
 }
 
 .media-container {
@@ -209,7 +210,6 @@ textarea {
   align-items: center;
   flex-direction: column;
   transform-style: preserve-3d;
-  margin: 2%;
   .btn {
     padding: 1.5rem;
     border-radius: 0.5rem;
@@ -284,6 +284,7 @@ app-footer {
     align-items: center;
     justify-items: center;
     width: 100%;
+    margin-top: 60px;
   }
   .contacts {
     min-height: min-content;
